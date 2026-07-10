@@ -56,30 +56,48 @@ besoin ni de Node ni de quoi que ce soit : on lui envoie du HTML/CSS/JS pur.
 
 Chaque point est aussi marqué `TODO` en commentaire dans le fichier concerné :
 
-- [ ] **Avis clients** (`src/pages/index.html`) : remplacer les 3 avis
-      provisoires par de vrais avis Google Business Profile
+À demander au client :
+
+- [ ] **Prix du petit déjeuner** : le 7,50 € dans `src/data/menu.json` est un
+      prix factice — demander le vrai prix
+- [ ] **Photo petit déjeuner** (viennoiseries, café, jus d'orange pressée) :
+      un emplacement lui est réservé en haut de la page carte
+      (`src/pages/menu.html`)
+- [ ] **Allergènes** : obligation d'information (règlement INCO) — récupérer
+      la liste auprès du client et décider du support (mention par plat dans
+      `menu.json` ou note générale renvoyant à un document en salle)
 - [ ] **Textes « Chez nous »** (`src/pages/chez-nous.html`) : remplacer les
       textes provisoires après l'entretien avec le client
-- [ ] **Widget GloriaFood** (`src/pages/reservation.html`) : intégrer le code
-      cuid/ruid de l'ancien site ; clarifier Dish vs GloriaFood avant
+- [ ] **Avis clients** (`src/pages/index.html`) : remplacer les 3 avis
+      provisoires par de vrais avis Google Business Profile
+- [ ] **Mentions légales** : il manque encore le capital social et le n° de
+      TVA intracommunautaire (SIRET, forme juridique et directeur de
+      publication sont renseignés)
+- [ ] **Carte PDF** : comparer avec `src/data/menu.json` et corriger
+- [ ] **Photo carpaccio** : confirmer qu'elle correspond bien au plat de la
+      carte (frites non mentionnées dans le descriptif)
+
+À faire côté développement :
+
+- [ ] **Module Dish** (`src/pages/reservation.html`) : intégrer le module de
+      réservation Dish (accès obtenu) — décision actée : pas de GloriaFood
 - [ ] **Formulaire de contact** (`src/pages/contact.html`) : écrire
       `scripts/contact.php` (envoi mail, PHP supporté par Strato) et le
       déployer à côté du site
-- [ ] **Mentions légales** : compléter SIRET, forme juridique, gérant ;
-      vérifier l'adresse exacte de STRATO AG
 - [ ] **Politique de confidentialité** : durée de conservation des e-mails,
       date de mise à jour
-- [ ] **Réseaux sociaux** (`src/partials/footer.html`) : vraies URL Facebook /
-      Instagram (ou retirer les liens)
+- [ ] **Vérifier l'adresse exacte de STRATO AG** sur le contrat du client
+      (mentions légales)
 - [ ] **Domaine** : une fois confirmé, ajouter `<link rel="canonical">`,
       `og:url`, `og:image` (URL absolues) dans chaque page + `robots.txt` et
       `sitemap.xml`
-- [ ] **Carte PDF** : comparer avec `src/data/menu.json` et corriger
-- [ ] **Photo carpaccio** : confirmer avec le client qu'elle correspond bien
-      au plat de la carte (frites non mentionnées dans le descriptif)
 - [ ] **Prix en page d'accueil** : les 3 plats signature ont leur prix en dur
       dans `index.html` — vérifier qu'ils correspondent à `menu.json` à chaque
       mise à jour de carte
+- [ ] **Logo source à recadrer un jour** : le JPG a un bandeau noir en haut,
+      masqué pour l'instant par un zoom CSS dans les vignettes rondes
+      (`.logo-circle`) — recadrer le fichier serait plus propre (le favicon
+      l'affiche encore)
 
 ## Notes techniques
 

@@ -4,9 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>La carte — Brasserie Le Dôme, Caluire | Salades, tartares, viandes, desserts</title>
-  <meta name="description" content="La carte de la Brasserie Le Dôme à Caluire : salades, tartares préparés maison, burgers, viandes d'origine France, poissons selon arrivage, desserts et formule du midi à 17,50 €.">
+  <meta name="description" content="La carte de la Brasserie Le Dôme à Caluire : petit déjeuner dès 8h, salades, tartares maison, burgers, viandes d'origine France, formule du midi à 17,50 € et goûter dès 14h30 (crêpes, gaufres, glaces artisanales).">
   <meta property="og:title" content="La carte — Brasserie Le Dôme, Caluire">
-  <meta property="og:description" content="Cuisine maison : salades, tartares, burgers, viandes d'origine France, formule du midi.">
+  <meta property="og:description" content="Restauration à toutes heures : petit déjeuner, cuisine maison le midi, goûter dès 14h30.">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="fr_FR">
   <!-- TODO : ajouter <link rel="canonical">, og:url et og:image (URL absolues) une fois le domaine définitif confirmé -->
@@ -23,11 +23,32 @@
   <div class="page-head">
     <div class="container">
       <h1>La carte</h1>
-      <p>Cuisine maison, produits frais et viandes d'origine France.
-      La carte évolue au fil des saisons et des arrivages.</p>
+      <p>Restauration à toutes heures : cuisine maison, produits frais et
+      viandes d'origine France. La carte évolue au fil des saisons et des arrivages.</p>
     </div>
   </div>
 
+  <section class="section menu-highlight">
+    <div class="container menu-highlight__grid">
+      <!-- TODO : remplacer cette tuile par une jolie photo petit déjeuner
+           (viennoiseries, café, jus d'orange pressée) — à demander au client. -->
+      <div class="menu-highlight__img" aria-hidden="true">
+        <span>Photo à venir<br>viennoiseries · café · jus d'orange</span>
+      </div>
+      <div>
+        <span class="section__eyebrow">À toute heure</span>
+        <h2>Du petit déjeuner au goûter</h2>
+        <p>Dès 8h00, petit déjeuner : croissants, pains au chocolat et jus
+        d'orange pressée.</p>
+        <p>Et à partir de 14h30, place au goûter : crêpes, gaufres, glaces
+        artisanales et desserts maison.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TODO ALLERGÈNES : obligation d'information (règlement INCO) — récupérer
+       la liste des allergènes auprès du client et décider du support
+       (mention par plat dans menu.json ou note générale + document en salle). -->
   {{MENU_TOC}}
 
   <section class="section">

@@ -6,6 +6,14 @@
   },
   "categories": [
     {
+      "id": "petit-dejeuner",
+      "title": "Petit déjeuner",
+      "type": "simple",
+      "items": [
+        { "name": "Formule petit déjeuner", "price": 7.50, "description": "Croissant ou pain au chocolat, jus d'orange pressée" }
+      ]
+    },
+    {
       "id": "salades",
       "title": "Salades",
       "type": "simple",
@@ -61,7 +69,7 @@
       "title": "Les viandes",
       "type": "simple",
       "items": [
-        { "name": "Escalope de veau à la milanaise", "price": 20.90, "description": "Linguines à la tomate", "origin": "France / race Charolaise" },
+        { "name": "Escalope de veau à la milanaise", "price": 20.90, "description": "Linguines à la tomate", "origin": "France" },
         { "name": "Le spécial Limousin", "price": 21.90, "description": "Morceau de boeuf grillé choisi selon arrivage, écrasé de pommes de terre et salade de saison", "origin": "France / race Limousine" }
       ]
     },
@@ -106,6 +114,12 @@
         { "name": "Tiramisu", "price": 7.90, "description": null },
         { "name": "Café gourmand", "price": 7.90, "description": "Supplément 1 € pour une grande boisson chaude" }
       ]
+    },
+    {
+      "id": "gouter",
+      "title": "Le goûter",
+      "type": "note",
+      "text": "Tous les jours à partir de 14h30 : crêpes, gaufres, glaces artisanales et desserts maison."
     },
     {
       "id": "vins-rouges",

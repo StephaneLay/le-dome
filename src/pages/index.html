@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Brasserie Le Dôme — Restaurant à Caluire, Centre Commercial Auchan | Cuisine maison</title>
-  <meta name="description" content="Brasserie Le Dôme à Caluire-et-Cuire : cuisine maison, viandes d'origine France, cocktails et tapas au cœur du Centre Commercial Auchan Caluire. Ouvert du lundi au samedi, 8h30-19h.">
+  <meta name="description" content="Brasserie Le Dôme à Caluire-et-Cuire : cuisine maison, viandes d'origine France, cocktails et tapas au cœur du Centre Commercial Auchan Caluire. Ouvert du lundi au samedi dès 8h, jusqu'à 21h le jeudi et le vendredi.">
   <meta property="og:title" content="Brasserie Le Dôme — Restaurant à Caluire">
   <meta property="og:description" content="Cuisine maison, cocktails et tapas au cœur du Centre Commercial Auchan Caluire.">
   <meta property="og:type" content="website">
@@ -21,7 +21,7 @@
     "name": "Brasserie Le Dôme",
     "servesCuisine": "française",
     "telephone": "+33478236415",
-    "email": "brasserie@ledome.fr",
+    "email": "brasserie.ledome@gmail.com",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "10 Chemin Jean Petit, Centre Commercial Auchan",
@@ -32,10 +32,20 @@
     "openingHoursSpecification": [
       {
         "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-        "opens": "08:30",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Saturday"],
+        "opens": "08:00",
         "closes": "19:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Thursday", "Friday"],
+        "opens": "08:00",
+        "closes": "21:00"
       }
+    ],
+    "sameAs": [
+      "https://www.instagram.com/ledomecaluire/",
+      "https://www.facebook.com/LEDOMECALUIRE/"
     ],
     "priceRange": "€€",
     "acceptsReservations": "True",
@@ -50,9 +60,10 @@
   <section class="hero">
     <img class="hero__bg" src="images/photo-boeuf-carpaccio.jpg" alt="" fetchpriority="high">
     <div class="container">
-      <img class="hero__logo" src="images/logo-le-dome.jpg" alt="" width="190" height="190">
-      <h1 class="hero__title">Brasserie Le Dôme</h1>
+      <span class="section__eyebrow">Brasserie &amp; restaurant — Caluire</span>
+      <h1 class="hero__title">Le Dôme</h1>
       <p class="hero__tagline">Cuisine maison <span class="dot">·</span> Cocktails <span class="dot">·</span> Tapas</p>
+      <div class="divider" aria-hidden="true"><span></span><span></span><span></span></div>
       <div class="hero__actions">
         <a class="btn btn--primary" href="menu.html">Découvrir la carte</a>
         <a class="btn btn--outline" href="reservation.html">Réserver une table</a>
@@ -81,7 +92,7 @@
         </li>
         <li>
           <h3>Viandes d'origine France</h3>
-          <p>Des races à viande sélectionnées : Limousine, Charolaise, choisies selon l'arrivage.</p>
+          <p>Des viandes d'origine France, dont la race Limousine, choisies selon l'arrivage.</p>
         </li>
         <li>
           <h3>Fraîcheur avant tout</h3>
@@ -163,7 +174,7 @@
         </div>
         <div class="practical__item">
           <h3>Horaires</h3>
-          <p>Lundi – samedi : 8h30 – 19h00<br>Dimanche : fermé</p>
+          <p>Lundi – samedi : 8h00 – 19h00<br>Jeudi et vendredi : jusqu'à 21h00<br>Dimanche : fermé</p>
         </div>
         <div class="practical__item">
           <h3>Réservation</h3>

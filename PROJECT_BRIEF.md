@@ -15,16 +15,16 @@ Ce document résume toutes les décisions prises et informations collectées ava
 - Nom : Brasserie Le Dôme
 - Adresse : 10 Chemin Jean Petit, Centre Commercial Auchan Caluire
 - Téléphone : 04 78 23 64 15
-- Email : brasserie@ledome.fr
-- Horaires : lundi-samedi 8h30-19h00, dimanche fermé
+- Email : brasserie.ledome@gmail.com
+- Horaires (corrigés 10/07/2026) : lundi-samedi 8h00-19h00, jusqu'à 21h00 le jeudi et le vendredi, dimanche fermé
 - Tagline (présente sur le logo/l'ancien site) : « Cuisine maison - Cocktails - Tapas »
 - Ces informations, ainsi que les informations légales (SIRET, forme juridique, gérant), sont confirmées à jour côté client — à récupérer auprès de lui pour la page mentions légales.
 
 ## Accès et outils
 
 - **Strato** (hébergement) : identifiants récupérés mais refusés à la connexion (« données d'accès non reconnues »). Pas encore résolu — piste : appel au support Strato par le client (titulaire du compte), possible confusion entre identifiants panel client et identifiants FTP. **Non bloquant** : l'accès n'est nécessaire qu'au moment du déploiement final (remplacement du site existant en FTP), tout le développement peut se faire sans.
-- **GloriaFood** : accès obtenu. C'est l'outil de réservation/commande actuellement utilisé sur le site (confirmé). Le code d'intégration (cuid/ruid) est déjà présent dans le HTML de l'ancien site et réutilisable tel quel.
-- **Dish** : accès également obtenu, mais son usage réel n'est pas encore clarifié par rapport à GloriaFood (les deux coexistent peut-être pour des usages différents — à vérifier avant l'intégration de la page réservation).
+- **GloriaFood** : accès obtenu. C'était l'outil de réservation de l'ancien site. **Décision client (10/07/2026) : GloriaFood ne sera pas utilisé sur le nouveau site.**
+- **Dish** : accès obtenu. **C'est l'outil retenu pour la réservation en ligne** — module à intégrer sur la page réservation.
 - **Google Business Profile** : accès obtenu directement (compte Google du client). Le profil est déjà globalement bien rempli, quelques détails à compléter plus tard (hors périmètre immédiat).
 - **Mentions légales** : absentes du site actuel. À créer (obligation légale en France — LCEN) : SIRET, hébergeur (Strato, avec ses coordonnées), directeur de publication (le gérant).
 - **Formulaire de contact** : l'ancien site utilise un script `scripts/form-u9251.php`, probablement généré par le widget de formulaire Adobe Muse/Business Catalyst (service Adobe discontinué). Fort risque qu'il ne fonctionne plus — à tester une fois l'accès FTP obtenu, sinon réécrire un script neutre (Strato supporte PHP sur la plupart de ses offres).
@@ -77,7 +77,7 @@ Le client a validé la structure d'un site de référence (« La Famille », res
 
 Éléments structurels à reprendre du site de référence, adaptés :
 - Hero plein écran avec une des photos + logo, overlay clair (pas de overlay sombre).
-- Bandeau à puces numérotées (« nos engagements ») — bon emplacement pour mettre en avant l'origine des viandes (France/race Limousine, Charolaise…), un vrai argument de confiance et de SEO qu'on n'a nulle part ailleurs sur le site actuel.
+- Bandeau à puces numérotées (« nos engagements ») — bon emplacement pour mettre en avant l'origine des viandes (France/race Limousine…), un vrai argument de confiance et de SEO qu'on n'a nulle part ailleurs sur le site actuel.
 - Bloc avis clients, à connecter aux avis Google Business Profile plus tard.
 - Galerie photo en grille — actuellement seulement 3-4 photos disponibles, prévoir des blocs de remplissage (couleur/texture/citation) plutôt que des trous.
 - Footer 3 colonnes (réseaux sociaux, contact/horaires, logo), fond Bordeaux plutôt que noir.
