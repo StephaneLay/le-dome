@@ -30,7 +30,8 @@ jobs:
       - name: Empêcher l'indexation de la préversion
         # La préversion ne doit pas être référencée par Google : le vrai site
         # sera sur le domaine du client (sinon contenu dupliqué).
-        run: printf 'User-agent: *\nDisallow: /\n' > dist/robots.txt
+        run: |
+          printf 'User-agent: *\nDisallow: /\n' > dist/robots.txt
       - uses: actions/configure-pages@v5
         with:
           # Active GitHub Pages sur le dépôt au premier passage.
