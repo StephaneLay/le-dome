@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Brasserie Le Dôme — Restaurant à Caluire, Centre Commercial Auchan | Cuisine maison</title>
+  <meta name="description" content="Brasserie Le Dôme à Caluire-et-Cuire : cuisine maison, viandes d'origine France, cocktails et tapas au cœur du Centre Commercial Auchan Caluire. Ouvert du lundi au samedi, 8h30-19h.">
+  <meta property="og:title" content="Brasserie Le Dôme — Restaurant à Caluire">
+  <meta property="og:description" content="Cuisine maison, cocktails et tapas au cœur du Centre Commercial Auchan Caluire.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="fr_FR">
+  <!-- TODO : ajouter <link rel="canonical">, og:url et og:image (URL absolues) une fois le domaine définitif confirmé -->
+  <link rel="icon" href="images/logo-le-dome.jpg">
+  <link rel="preload" href="fonts/bitter-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/worksans-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "Brasserie Le Dôme",
+    "servesCuisine": "française",
+    "telephone": "+33478236415",
+    "email": "brasserie@ledome.fr",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "10 Chemin Jean Petit, Centre Commercial Auchan",
+      "addressLocality": "Caluire-et-Cuire",
+      "postalCode": "69300",
+      "addressCountry": "FR"
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+        "opens": "08:30",
+        "closes": "19:00"
+      }
+    ],
+    "priceRange": "€€",
+    "acceptsReservations": "True",
+    "image": "images/logo-le-dome.jpg"
+  }
+  </script>
+</head>
+<body>
+{{HEADER}}
+<main id="contenu">
+
+  <section class="hero">
+    <img class="hero__bg" src="images/photo-boeuf-carpaccio.jpg" alt="" fetchpriority="high">
+    <div class="container">
+      <img class="hero__logo" src="images/logo-le-dome.jpg" alt="" width="190" height="190">
+      <h1 class="hero__title">Brasserie Le Dôme</h1>
+      <p class="hero__tagline">Cuisine maison <span class="dot">·</span> Cocktails <span class="dot">·</span> Tapas</p>
+      <div class="hero__actions">
+        <a class="btn btn--primary" href="menu.html">Découvrir la carte</a>
+        <a class="btn btn--outline" href="reservation.html">Réserver une table</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider" aria-hidden="true"><span></span><span></span><span></span></div>
+
+  <section class="section">
+    <div class="container intro">
+      <span class="section__eyebrow">Brasserie &amp; restaurant</span>
+      <h2>Un lieu haut en couleurs</h2>
+      <p>Au cœur du Centre Commercial Auchan Caluire, venez découvrir un lieu haut en couleurs.
+      Toute l'équipe est heureuse de vous accueillir, en salle comme sur notre terrasse ensoleillée.</p>
+    </div>
+  </section>
+
+  <section class="section commitments">
+    <div class="container">
+      <h2>Nos engagements</h2>
+      <ul class="commitments__grid">
+        <li>
+          <h3>Cuisine maison</h3>
+          <p>Des plats préparés sur place, des frites fraîches, des tartares préparés par nos soins.</p>
+        </li>
+        <li>
+          <h3>Viandes d'origine France</h3>
+          <p>Des races à viande sélectionnées : Limousine, Charolaise, choisies selon l'arrivage.</p>
+        </li>
+        <li>
+          <h3>Fraîcheur avant tout</h3>
+          <p>Sélection du poissonnier selon arrivage et produits de saison — quitte à ce qu'un plat manque parfois à la carte.</p>
+        </li>
+        <li>
+          <h3>Terrasse ensoleillée</h3>
+          <p>Une grande terrasse sous pergola pour profiter des beaux jours, midi et après-midi.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="dishes__intro">
+        <span class="section__eyebrow">La carte</span>
+        <h2>Quelques plats signature</h2>
+      </div>
+      <div class="dishes__grid">
+        <article class="dish-card">
+          <img src="images/photo-salade-cesar.jpg" alt="Salade César : poulet mariné, copeaux de parmesan, croûtons" loading="lazy" width="800" height="600">
+          <div class="dish-card__body">
+            <h3 class="dish-card__name">Salade César</h3>
+            <span class="dish-card__price">12,90&nbsp;€</span>
+          </div>
+        </article>
+        <article class="dish-card">
+          <img src="images/photo-salade-lyonnaise.jpg" alt="Salade lyonnaise : lardons, croûtons, œuf poché" loading="lazy" width="800" height="600">
+          <div class="dish-card__body">
+            <h3 class="dish-card__name">Salade lyonnaise</h3>
+            <span class="dish-card__price">12,90&nbsp;€</span>
+          </div>
+        </article>
+        <article class="dish-card">
+          <!-- TODO : confirmer avec le client que cette photo correspond bien au carpaccio de bœuf (les frites ne figurent pas dans le descriptif de la carte) -->
+          <img src="images/photo-boeuf-carpaccio.jpg" alt="Carpaccio de bœuf : pesto, parmesan, noisettes" loading="lazy" width="800" height="600">
+          <div class="dish-card__body">
+            <h3 class="dish-card__name">Carpaccio de bœuf</h3>
+            <span class="dish-card__price">17,90&nbsp;€</span>
+          </div>
+        </article>
+      </div>
+      <p class="dishes__more">
+        <a class="btn btn--primary" href="menu.html">Voir toute la carte</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- TODO AVANT MISE EN LIGNE : remplacer ces avis fictifs par de vrais avis
+       tirés de la fiche Google Business Profile du client (accès obtenu). -->
+  <section class="section reviews">
+    <div class="container">
+      <h2>Ils sont passés nous voir</h2>
+      <div class="reviews__grid">
+        <figure class="review-card">
+          <blockquote>Avis client à intégrer depuis la fiche Google — texte provisoire pour valider la mise en page.</blockquote>
+          <figcaption>Prénom N. — avis Google</figcaption>
+        </figure>
+        <figure class="review-card">
+          <blockquote>Avis client à intégrer depuis la fiche Google — texte provisoire pour valider la mise en page.</blockquote>
+          <figcaption>Prénom N. — avis Google</figcaption>
+        </figure>
+        <figure class="review-card">
+          <blockquote>Avis client à intégrer depuis la fiche Google — texte provisoire pour valider la mise en page.</blockquote>
+          <figcaption>Prénom N. — avis Google</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="section practical">
+    <div class="container">
+      <h2>Infos pratiques</h2>
+      <div class="practical__grid">
+        <div class="practical__item">
+          <h3>Adresse</h3>
+          <address>10 Chemin Jean Petit<br>Centre Commercial Auchan<br>69300 Caluire-et-Cuire</address>
+        </div>
+        <div class="practical__item">
+          <h3>Horaires</h3>
+          <p>Lundi – samedi : 8h30 – 19h00<br>Dimanche : fermé</p>
+        </div>
+        <div class="practical__item">
+          <h3>Réservation</h3>
+          <p><a href="tel:+33478236415">04 78 23 64 15</a><br>
+          ou <a href="reservation.html">réservez en ligne</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+{{FOOTER}}
+</body>
+</html>

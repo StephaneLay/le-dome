@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>La carte — Brasserie Le Dôme, Caluire | Salades, tartares, viandes, desserts</title>
+  <meta name="description" content="La carte de la Brasserie Le Dôme à Caluire : salades, tartares préparés maison, burgers, viandes d'origine France, poissons selon arrivage, desserts et formule du midi à 17,50 €.">
+  <meta property="og:title" content="La carte — Brasserie Le Dôme, Caluire">
+  <meta property="og:description" content="Cuisine maison : salades, tartares, burgers, viandes d'origine France, formule du midi.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="fr_FR">
+  <!-- TODO : ajouter <link rel="canonical">, og:url et og:image (URL absolues) une fois le domaine définitif confirmé -->
+  <link rel="icon" href="images/logo-le-dome.jpg">
+  <link rel="preload" href="fonts/bitter-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/worksans-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/style.css">
+  {{MENU_SCHEMA}}
+</head>
+<body>
+{{HEADER}}
+<main id="contenu">
+
+  <div class="page-head">
+    <div class="container">
+      <h1>La carte</h1>
+      <p>Cuisine maison, produits frais et viandes d'origine France.
+      La carte évolue au fil des saisons et des arrivages.</p>
+    </div>
+  </div>
+
+  {{MENU_TOC}}
+
+  <section class="section">
+    <div class="container menu-wrap">
+      {{MENU_ITEMS}}
+    </div>
+  </section>
+
+</main>
+{{FOOTER}}
+</body>
+</html>

@@ -1,0 +1,9 @@
+# Sortie du build
+dist/
+
+# Métadonnées Windows/WSL (fichiers créés lors de copies depuis Windows)
+*Zone.Identifier
+
+# Divers
+.DS_Store
+node_modules/

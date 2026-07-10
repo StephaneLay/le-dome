@@ -1,0 +1,50 @@
+# Préversion du site sur GitHub Pages, pour validation par le client.
+# À chaque push sur main : build (node build.js) puis publication de dist/.
+# Le déploiement final en production reste le FTP Strato (voir README).
+name: Déploiement GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Construire le site
+        run: node build.js
+      - name: Empêcher l'indexation de la préversion
+        # La préversion ne doit pas être référencée par Google : le vrai site
+        # sera sur le domaine du client (sinon contenu dupliqué).
+        run: printf 'User-agent: *\nDisallow: /\n' > dist/robots.txt
+      - uses: actions/configure-pages@v5
+        with:
+          # Active GitHub Pages sur le dépôt au premier passage.
+          enablement: true
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

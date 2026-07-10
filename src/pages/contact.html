@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact &amp; accès — Brasserie Le Dôme, Caluire</title>
+  <meta name="description" content="Contactez la Brasserie Le Dôme : 10 Chemin Jean Petit, Centre Commercial Auchan Caluire, 69300 Caluire-et-Cuire. Tél. 04 78 23 64 15 — parking gratuit du centre commercial.">
+  <meta property="og:title" content="Contact &amp; accès — Brasserie Le Dôme, Caluire">
+  <meta property="og:description" content="10 Chemin Jean Petit, Centre Commercial Auchan Caluire. Tél. 04 78 23 64 15.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="fr_FR">
+  <!-- TODO : ajouter <link rel="canonical">, og:url et og:image (URL absolues) une fois le domaine définitif confirmé -->
+  <link rel="icon" href="images/logo-le-dome.jpg">
+  <link rel="preload" href="fonts/bitter-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/worksans-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+{{HEADER}}
+<main id="contenu">
+
+  <div class="page-head">
+    <div class="container">
+      <h1>Contact &amp; accès</h1>
+      <p>Une question ? Appelez-nous… ou passez nous voir !</p>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container contact-grid">
+
+      <div>
+        <h2>Nous trouver</h2>
+        <address>
+          <strong>Brasserie Le Dôme</strong><br>
+          10 Chemin Jean Petit<br>
+          Centre Commercial Auchan<br>
+          69300 Caluire-et-Cuire
+        </address>
+        <p><a href="tel:+33478236415">04 78 23 64 15</a><br>
+        <a href="mailto:brasserie@ledome.fr">brasserie@ledome.fr</a></p>
+        <p><strong>Horaires</strong><br>
+        Lundi – samedi : 8h30 – 19h00<br>
+        Dimanche : fermé</p>
+        <p>Parking gratuit du centre commercial à deux pas du restaurant.</p>
+        <!-- Iframe repris de l'ancien site (choix client). Dépose des cookies
+             Google : mentionné dans la politique de confidentialité. -->
+        <div class="contact-map">
+          <iframe
+            src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=fr&amp;q=le%20dome%20caluire&amp;aq=0&amp;ie=UTF8&amp;t=h&amp;z=18&amp;iwloc=A&amp;output=embed"
+            width="600" height="320" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Plan d'accès à la Brasserie Le Dôme, Centre Commercial Auchan Caluire"></iframe>
+        </div>
+      </div>
+
+      <div>
+        <h2>Écrivez-nous</h2>
+        <!-- TODO AVANT MISE EN LIGNE : créer scripts/contact.php (envoi mail
+             côté serveur, Strato supporte PHP) — l'ancien script Adobe Muse
+             (form-u9251.php) est considéré comme hors service. -->
+        <form class="contact-form" action="scripts/contact.php" method="post">
+          <label for="nom">Votre nom</label>
+          <input type="text" id="nom" name="nom" required autocomplete="name">
+
+          <label for="email">Votre e-mail</label>
+          <input type="email" id="email" name="email" required autocomplete="email">
+
+          <label for="message">Votre message</label>
+          <textarea id="message" name="message" rows="6" required></textarea>
+
+          <button class="btn btn--primary" type="submit">Envoyer</button>
+          <p class="form-notice">Les informations saisies servent uniquement à répondre à votre
+          message. Voir notre <a href="politique-confidentialite.html">politique de confidentialité</a>.</p>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+{{FOOTER}}
+</body>
+</html>
