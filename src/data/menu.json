@@ -1,0 +1,186 @@
+{
+  "tagline": "Cuisine maison - Cocktails - Tapas",
+  "disclaimers": {
+    "prices": "Prix nets en euros, taxes et service compris. L'établissement n'accepte pas les chèques bancaires. Pour une garantie de fraîcheur irréprochable, certains plats peuvent manquer momentanément à la carte.",
+    "alcohol": "L'abus d'alcool est dangereux pour la santé. À consommer avec modération."
+  },
+  "categories": [
+    {
+      "id": "salades",
+      "title": "Salades",
+      "type": "simple",
+      "items": [
+        { "name": "Salade lyonnaise", "price": 12.90, "description": "Lardons, tomates, croûtons, oeuf poché, salade de saison" },
+        { "name": "Salade César", "price": 12.90, "description": "Poulet mariné, tomates, copeaux de parmesan, sauce César, croûtons et salade de saison" },
+        { "name": "Salade signature au poulpe", "price": 15.90, "description": "Poulpe, tomates, pamplemousse, concombre, graines de courge, salade de saison" },
+        { "name": "Verrine méditerranéenne", "price": 15.90, "description": "Poivrons grillés, fêta, tapenade, tomates séchées, toasts, jambon cru et salade de saison" },
+        { "name": "Salade dolce vita", "price": 18.90, "description": "Assortiment de tomates, mozzarella di bufala, pesto" },
+        { "name": "Carpaccio de boeuf", "price": 17.90, "description": "Pesto, parmesan, noisettes, tomates et salade de saison" },
+        { "name": "Poke bowl", "price": 18.50, "description": "Riz basmati, thon au citron vert, tomates marinées au gingembre et paprika, carottes râpées, fèves, coriandre fraîche, oignons rouges, vinaigrette à l'avocat" }
+      ]
+    },
+    {
+      "id": "tartares",
+      "title": "Les tartares",
+      "type": "simple",
+      "items": [
+        { "name": "Tartare de boeuf", "price": 17.50, "description": "Préparé par nos soins, frites fraîches et salade de saison" },
+        { "name": "Tartare de boeuf italien", "price": 18.50, "description": "Préparé par nos soins, pesto, pignons de pin et copeaux de parmesan, frites fraîches et salade de saison" },
+        { "name": "Tartare de thon frais", "price": 18.90, "description": "Thon, sauce soja, citron vert, wasabi et huile de sésame, frites fraîches et salade de saison" }
+      ]
+    },
+    {
+      "id": "burgers",
+      "title": "Les burgers",
+      "type": "simple",
+      "items": [
+        { "name": "Le Dôme burger", "price": 17.90, "description": "Pain burger frais, haché de boeuf, cheddar, salade, tomate, oignons frits et sauce tartare" },
+        { "name": "Le summer burger", "price": 20.50, "description": "Pain burger frais, haché de boeuf, coppa grillée, mozzarella, salade, tomate et mayonnaise au basilic" }
+      ]
+    },
+    {
+      "id": "formule-midi",
+      "title": "Formule du midi",
+      "type": "formula",
+      "price": 17.50,
+      "subtitle": "Du lundi au vendredi, hors jours fériés",
+      "components": [
+        "Plat du jour ou pièce du boucher (13.90 seul)",
+        "+ dessert du jour ou fromage blanc ou salade de fruits"
+      ],
+      "supplement": "Supplément 2,00 € pour un dessert à la carte ou le café gourmand"
+    },
+    {
+      "id": "suggestion-chef",
+      "title": "Suggestion du chef",
+      "type": "note",
+      "text": "À découvrir sur l'ardoise, demandez à votre serveur"
+    },
+    {
+      "id": "viandes",
+      "title": "Les viandes",
+      "type": "simple",
+      "items": [
+        { "name": "Escalope de veau à la milanaise", "price": 20.90, "description": "Linguines à la tomate", "origin": "France / race Charolaise" },
+        { "name": "Le spécial Limousin", "price": 21.90, "description": "Morceau de boeuf grillé choisi selon arrivage, écrasé de pommes de terre et salade de saison", "origin": "France / race Limousine" }
+      ]
+    },
+    {
+      "id": "pates",
+      "title": "Les pâtes",
+      "type": "simple",
+      "items": [
+        { "name": "Linguines au pesto et jambon cru", "price": 16.90, "description": null }
+      ]
+    },
+    {
+      "id": "poissons",
+      "title": "Les poissons",
+      "type": "simple",
+      "items": [
+        { "name": "Le thon snacké", "price": 20.90, "description": "Steack de thon, sauce andalouse, ratatouille et écrasé de pommes de terre" },
+        { "name": "La sélection du poissonnier (selon arrivage)", "price": 19.90, "description": "Huile vierge, ratatouille et riz pilaf" }
+      ]
+    },
+    {
+      "id": "fromages",
+      "title": "Fromages",
+      "type": "simple",
+      "items": [
+        { "name": "Fromage blanc faisselle", "price": 4.50, "description": "Crème, coulis de fruits rouges ou miel" },
+        { "name": "Assiette trois fromages", "price": 5.90, "description": null },
+        { "name": "Demi Saint Marcelin affiné", "price": 5.50, "description": null }
+      ]
+    },
+    {
+      "id": "desserts",
+      "title": "Desserts",
+      "type": "simple",
+      "items": [
+        { "name": "Salade de fruits frais", "price": 6.50, "description": null },
+        { "name": "Fondant au chocolat", "price": 6.50, "description": null },
+        { "name": "Crème brûlée", "price": 6.50, "description": null },
+        { "name": "Panacotta bébé rose avec sa madeleine", "price": 6.50, "description": null },
+        { "name": "L'île flottante aux pralines", "price": 6.50, "description": null },
+        { "name": "Pavlova ananas avec son caramel au gingembre", "price": 6.50, "description": null },
+        { "name": "Tiramisu", "price": 7.90, "description": null },
+        { "name": "Café gourmand", "price": 7.90, "description": "Supplément 1 € pour une grande boisson chaude" }
+      ]
+    },
+    {
+      "id": "vins-rouges",
+      "title": "Vins rouges",
+      "type": "tiered",
+      "formats": ["12cl", "25cl", "46cl", "75cl"],
+      "items": [
+        { "name": "AOP Saint-Joseph Septentrio", "prices": { "75cl": 36.00 } },
+        { "name": "AOP Crozes Hermitage Revol", "prices": { "12cl": 7.00, "25cl": 13.00, "46cl": 23.00 } },
+        { "name": "Notre sélection du moment", "prices": { "12cl": 6.00, "25cl": 11.50, "46cl": 22.00, "75cl": 34.00 } },
+        { "name": "AOP Côtes du Rhône", "prices": { "12cl": 4.50, "25cl": 8.50, "46cl": 14.00 } }
+      ]
+    },
+    {
+      "id": "vins-blancs",
+      "title": "Vins blancs",
+      "type": "tiered",
+      "formats": ["12cl", "25cl", "46cl", "75cl"],
+      "items": [
+        { "name": "AOP Saint-Véran Les Arbillons", "prices": { "12cl": 7.00, "25cl": 13.00, "46cl": 23.00, "75cl": 36.00 } },
+        { "name": "Notre sélection du moment", "prices": { "12cl": 6.00, "25cl": 11.50, "46cl": 22.00, "75cl": 34.00 } },
+        { "name": "IGP Viognier", "prices": { "12cl": 4.50, "25cl": 8.50, "46cl": 14.00 } },
+        { "name": "IGP Chardonnay", "prices": { "12cl": 4.50, "25cl": 8.50, "46cl": 14.00 } }
+      ]
+    },
+    {
+      "id": "vins-roses",
+      "title": "Vins rosés",
+      "type": "tiered",
+      "formats": ["12cl", "25cl", "46cl", "75cl"],
+      "items": [
+        { "name": "IGP d'Oc Cinsault Rosé", "prices": { "12cl": 5.50, "25cl": 10.50, "46cl": 16.50 } },
+        { "name": "Côtes de Provence Les Galets", "prices": { "12cl": 7.00, "25cl": 13.00, "46cl": 23.00, "75cl": 34.00 } },
+        { "name": "Coteaux Varois en Provence Château Favori (bio)", "prices": { "75cl": 40.00 } }
+      ]
+    },
+    {
+      "id": "bieres-pression",
+      "title": "Bières à la pression",
+      "type": "tiered",
+      "formats": ["Demi 25cl", "Sérieux 50cl"],
+      "items": [
+        { "name": "1664", "prices": { "Demi 25cl": 3.90, "Sérieux 50cl": 7.60 } },
+        { "name": "1664 Blanche", "prices": { "Demi 25cl": 4.40, "Sérieux 50cl": 8.60 } },
+        { "name": "Grimbergen Blonde", "prices": { "Demi 25cl": 4.40, "Sérieux 50cl": 8.60 } },
+        { "name": "Bière de saison", "prices": { "Demi 25cl": 4.80, "Sérieux 50cl": 9.40 } },
+        { "name": "Monaco / Tango", "prices": { "Demi 25cl": 4.00, "Sérieux 50cl": 7.80 } }
+      ]
+    },
+    {
+      "id": "bieres-bouteille",
+      "title": "Bières en bouteille",
+      "type": "simple",
+      "items": [
+        { "name": "Pelforth Brune", "price": 4.90, "description": null },
+        { "name": "Desesperados", "price": 5.50, "description": null },
+        { "name": "Grimbergen Blonde sans alcool", "price": 5.00, "description": null }
+      ]
+    },
+    {
+      "id": "aperitif-maison",
+      "title": "Apéritif maison",
+      "type": "simple",
+      "items": [
+        { "name": "La bulle rosé, Domaine des Palais", "price": 5.00, "description": null }
+      ]
+    },
+    {
+      "id": "eaux",
+      "title": "Les eaux",
+      "type": "tiered",
+      "formats": ["50cl", "1l"],
+      "items": [
+        { "name": "Eau minérale plate ou gazeuse", "prices": { "50cl": 4.00, "1l": 5.50 } }
+      ]
+    }
+  ]
+}
