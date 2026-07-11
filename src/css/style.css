@@ -26,6 +26,24 @@
 }
 
 @font-face {
+  font-family: 'Bitter';
+  font-style: italic;
+  font-weight: 300 800;
+  font-display: swap;
+  src: url('../fonts/bitter-italic-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Bitter';
+  font-style: italic;
+  font-weight: 300 800;
+  font-display: swap;
+  src: url('../fonts/bitter-italic-latin-ext.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
   font-family: 'Work Sans';
   font-style: normal;
   font-weight: 100 900;
@@ -198,13 +216,37 @@ body { overflow-x: clip; }
 
 .section__eyebrow {
   display: block;
-  font-family: var(--font-texte);
-  font-size: 0.85rem;
+  font-family: var(--font-titres);
+  font-style: italic;
+  font-size: 1.1rem;
   font-weight: 600;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
   color: var(--ambre);
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.6rem;
+}
+
+/* Souligné « coup de pinceau » sous les grands titres de sections. */
+.page-head h1::after,
+.intro h2::after,
+.commitments h2::after,
+.dishes__intro h2::after,
+.reviews h2::after,
+.practical h2::after,
+.about-block h2::after {
+  content: '';
+  display: block;
+  width: 150px;
+  height: 13px;
+  margin-top: 0.4em;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 220 14'%3E%3Cpath d='M4 9 C 45 4, 95 3, 135 6 S 200 10, 216 6' stroke='%23E2751A' stroke-width='5' fill='none' stroke-linecap='round'/%3E%3Cpath d='M14 12 C 60 8, 120 7, 205 10' stroke='%23E2751A' stroke-width='2.5' fill='none' stroke-linecap='round' opacity='.55'/%3E%3C/svg%3E") center / contain no-repeat;
+}
+
+/* Titres centrés : le trait l'est aussi ; titres alignés à gauche : idem. */
+.page-head h1::after,
+.intro h2::after,
+.commitments h2::after,
+.dishes__intro h2::after,
+.reviews h2::after {
+  margin-inline: auto;
 }
 
 /* Séparateur de sections : trois points ronds aux couleurs du logo,
@@ -479,6 +521,7 @@ body { overflow-x: clip; }
 
 .hero__tagline {
   font-family: var(--font-titres);
+  font-style: italic;
   font-size: clamp(1.15rem, 2.8vw, 1.45rem);
   color: var(--encre);
   margin-bottom: 1.1rem;
@@ -555,10 +598,12 @@ body { overflow-x: clip; }
   content: counter(engagement, decimal-leading-zero);
   display: block;
   font-family: var(--font-titres);
-  font-size: 2.4rem;
+  font-style: italic;
+  font-size: 3.4rem;
   font-weight: 700;
+  line-height: 1;
   color: var(--ambre);
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.35rem;
 }
 
 .commitments__grid h3 {
@@ -662,13 +707,31 @@ body { overflow-x: clip; }
 
 .review-card blockquote {
   margin: 0 0 1rem;
+  font-family: var(--font-titres);
   font-style: italic;
+  font-size: 1.02rem;
+  line-height: 1.55;
+}
+
+/* Cinq étoiles Google au-dessus de chaque citation. */
+.review-card blockquote::before {
+  content: '★★★★★';
+  display: block;
+  color: var(--ambre);
+  font-size: 0.95rem;
+  letter-spacing: 0.22em;
+  margin-bottom: 0.6rem;
 }
 
 .review-card figcaption {
   font-weight: 600;
   color: var(--bordeaux);
   font-size: 0.95rem;
+}
+
+.review-card figcaption::before {
+  content: '— ';
+  color: var(--sauge);
 }
 
 /* --- Accueil : bloc pratique --------------------------------------------- */
