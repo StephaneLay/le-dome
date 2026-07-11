@@ -119,6 +119,45 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 
+/* --- Décor aquarelle -------------------------------------------------------- */
+/* Taches florales dans l'esprit des fleurs peintes du logo, posées en
+   filigrane derrière certaines sections. Un seul SVG (pétales flous aux
+   couleurs de la palette), varié par rotation/miroir. */
+
+:root {
+  --aquarelle: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 400'%3E%3Cdefs%3E%3Cfilter id='w' x='-30%25' y='-30%25' width='160%25' height='160%25'%3E%3CfeGaussianBlur stdDeviation='7'/%3E%3C/filter%3E%3C/defs%3E%3Cg filter='url(%23w)'%3E%3Cellipse cx='140' cy='210' rx='85' ry='48' fill='%23E2751A' opacity='.55' transform='rotate(-24 140 210)'/%3E%3Cellipse cx='240' cy='170' rx='60' ry='34' fill='%23D6455C' opacity='.5' transform='rotate(18 240 170)'/%3E%3Cellipse cx='300' cy='240' rx='48' ry='26' fill='%23A7A96E' opacity='.55' transform='rotate(-40 300 240)'/%3E%3Cellipse cx='190' cy='120' rx='38' ry='20' fill='%23F0A35E' opacity='.5' transform='rotate(30 190 120)'/%3E%3Cellipse cx='90' cy='140' rx='30' ry='16' fill='%23A7A96E' opacity='.45' transform='rotate(60 90 140)'/%3E%3Cellipse cx='210' cy='260' rx='34' ry='18' fill='%23D6455C' opacity='.4' transform='rotate(-8 210 260)'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* Les taches débordent volontairement des sections : on interdit tout
+   défilement horizontal parasite (clip ne casse pas le header sticky). */
+body { overflow-x: clip; }
+
+.aquarelle { position: relative; }
+
+.aquarelle > .container { position: relative; z-index: 1; }
+
+.aquarelle::before {
+  content: '';
+  position: absolute;
+  width: min(380px, 55vw);
+  aspect-ratio: 1;
+  background: var(--aquarelle) center / contain no-repeat;
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+.aquarelle--gauche::before {
+  left: max(-150px, -14vw);
+  top: 8%;
+  transform: rotate(-14deg);
+}
+
+.aquarelle--droite::before {
+  right: max(-150px, -14vw);
+  bottom: 6%;
+  transform: scaleX(-1) rotate(10deg);
+}
+
 /* --- Utilitaires ---------------------------------------------------------- */
 
 .container {
@@ -471,9 +510,26 @@ html { scroll-behavior: smooth; }
 /* --- Accueil : engagements ------------------------------------------------ */
 
 .commitments {
+  position: relative;
+  overflow: clip;
   background: var(--bordeaux);
   color: var(--creme);
 }
+
+/* Sur le bordeaux, la même fleur en très léger — comme peinte sur le mur. */
+.commitments::after {
+  content: '';
+  position: absolute;
+  width: min(420px, 60vw);
+  aspect-ratio: 1;
+  right: -110px;
+  bottom: -160px;
+  background: var(--aquarelle) center / contain no-repeat;
+  opacity: 0.14;
+  pointer-events: none;
+}
+
+.commitments .container { position: relative; z-index: 1; }
 
 .commitments h2 {
   color: var(--creme);
@@ -637,10 +693,40 @@ html { scroll-behavior: smooth; }
 /* --- Pages intérieures : bandeau de titre --------------------------------- */
 
 .page-head {
+  position: relative;
+  overflow: clip;
   background: var(--creme-fonce);
   text-align: center;
   padding-block: clamp(2.5rem, 6vw, 4rem);
 }
+
+/* Fleurs aquarelle dans les coins des bandeaux de titre (toutes les pages
+   intérieures en héritent automatiquement). */
+.page-head::before,
+.page-head::after {
+  content: '';
+  position: absolute;
+  width: clamp(200px, 28vw, 320px);
+  aspect-ratio: 1;
+  background: var(--aquarelle) center / contain no-repeat;
+  pointer-events: none;
+}
+
+.page-head::before {
+  top: -22%;
+  right: -70px;
+  transform: rotate(16deg);
+  opacity: 0.34;
+}
+
+.page-head::after {
+  bottom: -38%;
+  left: -80px;
+  transform: scaleX(-1) rotate(-12deg);
+  opacity: 0.26;
+}
+
+.page-head .container { position: relative; z-index: 1; }
 
 .page-head h1 { color: var(--bordeaux); margin-bottom: 0.3em; }
 
