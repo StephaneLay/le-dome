@@ -38,7 +38,7 @@
     document.querySelectorAll(
       '.hero__panel, .intro, .dishes__intro, .about-block, .menu-category, ' +
       '.booking__phone, .booking__widget, .booking__groups, .contact-grid > div, ' +
-      '.reviews h2, .practical h2, .commitments h2, .legal > *'
+      '.reviews h2, .practical h2, .commitments h2, .galerie h2, .legal > *'
     ).forEach(function (bloc) {
       bloc.classList.add('reveal');
       observateur.observe(bloc);

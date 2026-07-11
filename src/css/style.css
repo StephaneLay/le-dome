@@ -66,6 +66,8 @@
 :root {
   --creme: #FAF6EB;
   --creme-fonce: #F1EAD8;
+  --ambre-clair: #F7E6CF;
+  --sauge-clair: #ECEDDA;
   --ambre: #E2751A;
   --framboise: #D6455C;
   --bordeaux: #6E2036;
@@ -214,6 +216,10 @@ body { overflow-x: clip; }
   padding-block: clamp(3rem, 7vw, 5.5rem);
 }
 
+/* Bandes teintées pour rythmer les pages : dérivées de la palette. */
+.section--ambre { background: var(--ambre-clair); }
+.section--sauge { background: var(--sauge-clair); }
+
 .section__eyebrow {
   display: block;
   font-family: var(--font-titres);
@@ -231,6 +237,7 @@ body { overflow-x: clip; }
 .dishes__intro h2::after,
 .reviews h2::after,
 .practical h2::after,
+.galerie h2::after,
 .about-block h2::after {
   content: '';
   display: block;
@@ -675,7 +682,7 @@ body { overflow-x: clip; }
 /* --- Accueil : avis ------------------------------------------------------- */
 
 .reviews {
-  background: var(--creme-fonce);
+  background: var(--sauge-clair);
 }
 
 .reviews h2 { text-align: center; margin-bottom: 2.5rem; }
@@ -805,7 +812,8 @@ body { overflow-x: clip; }
 /* Petit déjeuner / goûter : deux cartes compactes sous le sommaire,
    volontairement discrètes pour laisser la vedette à la carte. */
 .services {
-  padding-block: clamp(1.5rem, 3vw, 2.25rem) 0;
+  background: var(--ambre-clair);
+  padding-block: clamp(1.5rem, 3vw, 2.25rem);
 }
 
 .services__grid {
@@ -1057,6 +1065,13 @@ body { overflow-x: clip; }
 
 .about-block--reverse > :first-child { order: 2; }
 
+/* Le bloc terrasse se détache sur une bande sauge arrondie. */
+.about-block--reverse {
+  background: var(--sauge-clair);
+  border-radius: 24px;
+  padding: clamp(1.25rem, 3vw, 2.5rem);
+}
+
 @media (max-width: 700px) {
   .about-block--reverse > :first-child { order: 0; }
 }
@@ -1138,6 +1153,13 @@ body { overflow-x: clip; }
   box-shadow: var(--ombre);
 }
 
+.contact-form {
+  background: var(--blanc);
+  border-radius: var(--rayon);
+  box-shadow: var(--ombre);
+  padding: clamp(1.25rem, 3vw, 2rem);
+}
+
 .contact-form label {
   display: block;
   font-weight: 600;
@@ -1149,7 +1171,7 @@ body { overflow-x: clip; }
   width: 100%;
   font: inherit;
   color: var(--encre);
-  background: var(--blanc);
+  background: var(--creme);
   border: 1px solid var(--creme-fonce);
   border-radius: var(--rayon);
   padding: 0.7rem 0.9rem;
