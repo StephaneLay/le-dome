@@ -58,10 +58,12 @@
       </div>
 
       <div>
-        <h2>Écrivez-nous</h2>
-        <!-- TODO AVANT MISE EN LIGNE : créer scripts/contact.php (envoi mail
-             côté serveur, Strato supporte PHP) — l'ancien script Adobe Muse
-             (form-u9251.php) est considéré comme hors service. -->
+        <h2 id="formulaire">Écrivez-nous</h2>
+        <!-- Le message est envoyé par scripts/contact.php (PHP, exécuté sur
+             le serveur Strato uniquement — pas en préversion locale/GitHub). -->
+        <p class="form-erreur" id="form-erreur" hidden>Le message n'a pas pu être
+        envoyé (champs manquants ou erreur technique). Vérifiez le formulaire et
+        réessayez, ou appelez-nous au <a href="tel:+33478236415">04 78 23 64 15</a>.</p>
         <form class="contact-form" action="scripts/contact.php" method="post">
           <label for="nom">Votre nom</label>
           <input type="text" id="nom" name="nom" required autocomplete="name">
@@ -71,6 +73,11 @@
 
           <label for="message">Votre message</label>
           <textarea id="message" name="message" rows="6" required></textarea>
+
+          <p class="visually-hidden" aria-hidden="true">
+            <label for="site_web">Ne pas remplir ce champ</label>
+            <input type="text" id="site_web" name="site_web" tabindex="-1" autocomplete="off">
+          </p>
 
           <button class="btn btn--primary" type="submit">Envoyer</button>
           <p class="form-notice">Les informations saisies servent uniquement à répondre à votre

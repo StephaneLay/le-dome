@@ -85,6 +85,40 @@ Le client a validé la structure d'un site de référence (« La Famille », res
 
 **Cette direction a été validée sur la base de la palette/typo en isolation ; le client attend de voir le rendu réel sur une vraie page avant confirmation définitive.** La première page construite (l'accueil) sert donc aussi de test de cette direction — être prêt à ajuster.
 
+## Intégrations relevées sur l'ancien site (www.ledome.fr, inspecté le 11/07/2026)
+
+- **Réservation Dish** (page `reservations.html` de l'ancien site) — widget officiel DISH Reservation, à réutiliser tel quel :
+  ```html
+  <div id="hors-hydra-71d4f0c0-716f-11e9-9b60-0f57130d9822"></div>
+  <script>
+    var _hors=[['eid','hydra-71d4f0c0-716f-11e9-9b60-0f57130d9822'],['tagid','hors-hydra-71d4f0c0-716f-11e9-9b60-0f57130d9822'],['width','100%'],['height',''],['foregroundColor',''],['backgroundColor',''],['linkColor',''],['errorColor',''],['primaryButtonForegroundColor',''],['primaryButtonBackgroundColor',''],['secondaryButtonForegroundColor',''],['secondaryButtonBackgroundColor','']];
+    (function(d, t) { var e=d.createElement(t),s=d.getElementsByTagName(t)[0]; e.src = "https://reservation.dish.co/widget.js"; s.parentNode.insertBefore(e,s); }(document, 'script'));
+  </script>
+  ```
+  Le widget accepte des couleurs personnalisées (champs vides ci-dessus) — on pourra y mettre la palette du site.
+  `https://reservation.dish.co/widget.js` répond bien (HTTP 200, vérifié le 11/07/2026).
+- **GloriaFood** (page `reservation.html` au singulier) : `data-glf-cuid="70691d1a-be7a-4dbd-a325-64183386224d"`, `data-glf-ruid="149d8b2a-4eb5-408e-9137-a81d25944d6c"`, script `fbgcdn.com/embedder/js/ewm2.js`. Conservé ici pour mémoire uniquement — décision : non réutilisé.
+- **Formulaire de contact** : POST local vers `scripts/form-u9251.php` (script Muse hébergé sur Strato, répond HTTP 200 — donc présent, reste à tester l'envoi réel). Champs : `custom_U9259` (texte, nom), `Email`, `custom_U9252` (message). Le destinataire est codé dans le PHP — fichier à récupérer sur Strato.
+
+## Cartographie du serveur Strato (SFTP, relevée le 11/07/2026)
+
+Racine web du pack (= racine de ledome.fr). Sauvegarde complète locale dans `legacy/sauvegarde-2026-07-11/` (hors git).
+
+| Emplacement | Contenu | Sort au déploiement |
+|---|---|---|
+| `/*.html`, `/css`, `/images`, `/fonts`, `/scripts`, `/phone`, `/sitemap.xml`, `/muse_manifest.xml` | Site Muse actuel Le Dôme (dernière retouche oct. 2025) | **Remplacé** par le nouveau site |
+| `/cnn-immo/` | **Second site VIVANT** (location vacances La Grande Motte, mis à jour fév. 2026, calendrier actif le 11/07/2026) | **NE PAS TOUCHER** — vérifier quel domaine y pointe |
+| `/reservation/reservation/` | WordPress abandonné (noyau 2019, wp-config.php en 666) | Risque de sécurité — à supprimer avec accord client |
+| `/new_ledome/` (2016), `/LEDOME2023/` (vide), `/doc/` (menu 2015) | Vieilles versions / restes | À supprimer avec accord client |
+| `/assets/` | 5 photos JPG haute résolution de 2021 (img_0446 à 0470) + une carte 2020 | À examiner — possibles photos pour la galerie |
+| `/cgi-bin/`, `/cgi-data/` | Vides / infra Strato | Laisser |
+
+**Formulaire de contact (analysé)** : `form-u9251.php` → moteur Muse `form_process.php` → `@mail()` PHP, expéditeur **et** destinataire `brasserie@ledome.fr` (à changer pour brasserie.ledome@gmail.com). Anti-spam par throttle SQLite. Aucune fonction PHP supprimée (compatible PHP 8). La base `muse-throttle-db.sqlite3` a été modifiée le 10/07/2026 → le pipeline PHP tourne encore réellement sur le serveur. Il existe aussi `form-u2453.php` (formulaire de la version mobile `/phone`).
+
+**Accès SFTP temporaire du projet** : `stu462370244` (créé le 11/07/2026 dans le panel par Stéphane) — **à supprimer en fin de projet**.
+
+**Relevés du panel Strato (11/07/2026)** : domaines `ledome.fr` → `/` et `cnn-immo.fr` → `/cnn-immo/` ; PHP 7.2 ; pas de HTTPS actif (SSL à activer avant mise en ligne). Formulaire actuel confirmé fonctionnel par le client (mail reçu récemment sur brasserie@ledome.fr). Décisions : formulaire → destinataire brasserie.ledome@gmail.com (expéditeur reste brasserie@ledome.fr pour la délivrabilité) ; réservations Dish conservées telles quelles (service du midi uniquement) ; pas de nettoyage des vieux dossiers du serveur (WordPress abandonné, new_ledome…), le client n'y tient pas.
+
 ## Sitemap proposé (à valider avec le client)
 
 Accueil, Chez nous, Menu, Réservation, Contact, Mentions légales, Politique de confidentialité — environ 7 pages.

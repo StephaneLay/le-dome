@@ -7,3 +7,6 @@ dist/
 # Divers
 .DS_Store
 node_modules/
+
+# Sauvegarde de l ancien site (hors git, volumineux)
+legacy/

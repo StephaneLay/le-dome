@@ -38,11 +38,35 @@
       </div>
 
       <h2>En ligne</h2>
-      <!-- TODO : intégrer ici le module de réservation Dish (accès obtenu).
-           Décision client : la réservation passe par Dish, GloriaFood ne sera
-           pas utilisé. -->
+      <p>Les réservations en ligne concernent le <strong>service du midi</strong>.
+      Pour toute autre demande, appelez-nous directement.</p>
+      <!-- Widget DISH Reservation — même établissement que sur l'ancien site
+           (eid hydra-71d4f0c0…), recoloré avec la palette du site. -->
       <div class="booking__widget">
-        <p>Le module de réservation en ligne sera intégré ici (Dish).</p>
+        <div id="hors-hydra-71d4f0c0-716f-11e9-9b60-0f57130d9822"></div>
+        <script>
+          var _hors = [
+            ['eid', 'hydra-71d4f0c0-716f-11e9-9b60-0f57130d9822'],
+            ['tagid', 'hors-hydra-71d4f0c0-716f-11e9-9b60-0f57130d9822'],
+            ['width', '100%'],
+            ['height', ''],
+            ['foregroundColor', '#241318'],
+            ['backgroundColor', '#FFFFFF'],
+            ['linkColor', '#D6455C'],
+            ['errorColor', '#D6455C'],
+            ['primaryButtonForegroundColor', '#FFFFFF'],
+            ['primaryButtonBackgroundColor', '#E2751A'],
+            ['secondaryButtonForegroundColor', '#6E2036'],
+            ['secondaryButtonBackgroundColor', '#F1EAD8']
+          ];
+          (function (d, t) {
+            var e = d.createElement(t), s = d.getElementsByTagName(t)[0];
+            e.src = 'https://reservation.dish.co/widget.js';
+            s.parentNode.insertBefore(e, s);
+          }(document, 'script'));
+        </script>
+        <noscript><p>Le module de réservation nécessite JavaScript —
+        vous pouvez aussi réserver par téléphone au <a href="tel:+33478236415">04 78 23 64 15</a>.</p></noscript>
       </div>
 
       <div class="booking__phone booking__groups">

@@ -43,14 +43,18 @@ besoin ni de Node ni de quoi que ce soit : on lui envoie du HTML/CSS/JS pur.
 4. Commit, puis redéployer **au minimum `menu.html`** (le plus simple et le
    plus sûr : redéployer tout `dist/`)
 
-## Déploiement (Strato, FTP)
+## Déploiement (Strato, SFTP)
 
 - Envoyer **le contenu de `dist/`** (pas le dossier `dist` lui-même, pas
   `src/`, pas `build.js`) à la racine web de l'hébergement.
-- Envoyer l'intégralité de `dist/` évite les incohérences entre une page
-  régénérée et un header/footer commun qui aurait changé.
-- Accès FTP Strato : toujours en attente de résolution (voir brief, point
-  ouvert n° 1).
+- ⚠️ **NE JAMAIS TOUCHER `/cnn-immo/`** : c'est un second site vivant
+  (cnn-immo.fr, location de vacances) hébergé sur le même pack. Remplacer
+  uniquement les fichiers du site Le Dôme (pages HTML de la racine + css,
+  js, images, fonts, scripts, phone). Sauvegarde complète du serveur dans
+  `legacy/sauvegarde-2026-07-11/`.
+- Le serveur est en **PHP 7.2** : `scripts/contact.php` est écrit pour cette
+  version (ne pas y introduire de syntaxe PHP 8).
+- Domaines : `ledome.fr` → racine `/`, `cnn-immo.fr` → `/cnn-immo/`.
 
 ## Avant la mise en ligne — checklist
 
@@ -76,24 +80,26 @@ Chaque point est aussi marqué `TODO` en commentaire dans le fichier concerné :
 
 À faire côté développement :
 
-- [ ] **Module Dish** (`src/pages/reservation.html`) : intégrer le module de
-      réservation Dish (accès obtenu) — décision actée : pas de GloriaFood
-- [ ] **Formulaire de contact** (`src/pages/contact.html`) : écrire
-      `scripts/contact.php` (envoi mail, PHP supporté par Strato) et le
-      déployer à côté du site
+- [ ] **Activer le certificat SSL/HTTPS** dans le panel Strato : le site
+      actuel ne répond qu'en HTTP (vérifié le 11/07/2026) — généralement
+      inclus gratuitement dans le pack
+- [ ] **Après activation du SSL** : ajouter `<link rel="canonical">`,
+      `og:url`, `og:image` (URL absolues en https://www.ledome.fr/) dans
+      chaque page + `robots.txt` et `sitemap.xml`
+- [ ] **Tester après déploiement** : le formulaire de contact de bout en bout
+      (envoi réel → réception sur brasserie.ledome@gmail.com, y compris le
+      dossier spam) et le widget Dish (créneaux du midi proposés)
 - [ ] **Politique de confidentialité** : durée de conservation des e-mails,
       date de mise à jour
 - [ ] **Vérifier l'adresse exacte de STRATO AG** sur le contrat du client
       (mentions légales)
-- [ ] **Domaine** : une fois confirmé, ajouter `<link rel="canonical">`,
-      `og:url`, `og:image` (URL absolues) dans chaque page + `robots.txt` et
-      `sitemap.xml`
 - [ ] **Prix en page d'accueil** : les 3 plats signature ont leur prix en dur
       dans `index.html` — vérifier qu'ils correspondent à `menu.json` à chaque
       mise à jour de carte
-- [ ] **Poids des images** : `terrasse.jpg` et `petit-dejeuner.jpg` sont des
-      photos brutes de plusieurs Mo — les redimensionner/compresser avant la
-      mise en ligne (vitesse de chargement = SEO)
+- [ ] **Poids des images** : `terrasse.jpg`, `petit-dejeuner.jpg` et les 4
+      photos récupérées de l'ancien serveur (`salle-*.jpg`, `terrasse-*.jpg`)
+      font 1 à 2 Mo chacune — les redimensionner/compresser avant la mise en
+      ligne (vitesse de chargement = SEO)
 
 ## Notes techniques
 
@@ -105,3 +111,13 @@ Chaque point est aussi marqué `TODO` en commentaire dans le fichier concerné :
   statique cliquable qui charge la carte au clic.
 - Le JSON-LD `Restaurant` est dans `index.html` ; le JSON-LD `Menu` est
   généré par `build.js` dans `menu.html`.
+- **Formulaire de contact** : `src/scripts/contact.php` envoie via `mail()`
+  PHP (expéditeur brasserie@ledome.fr — adresse du domaine, requise pour la
+  délivrabilité — destinataire brasserie.ledome@gmail.com, Reply-To le
+  visiteur), même mécanisme que l'ancien site dont l'envoi est avéré.
+  Anti-spam : champ pot de miel invisible. Succès → redirection `merci.html`.
+  **Le PHP ne s'exécute ni en préversion locale ni sur GitHub Pages** — le
+  formulaire ne se teste que sur le serveur Strato.
+- **Réservation** : widget DISH Reservation (même établissement que l'ancien
+  site), recoloré via ses paramètres. Réservations = service du midi
+  (configuration Dish conservée telle quelle).

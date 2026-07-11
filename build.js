@@ -195,7 +195,7 @@ function build() {
     console.log(`  ✓ ${page}`);
   }
 
-  for (const dir of ['css', 'js', 'images', 'fonts']) {
+  for (const dir of ['css', 'js', 'images', 'fonts', 'scripts']) {
     const srcDir = path.join(SRC, dir);
     if (fs.existsSync(srcDir)) copyDir(srcDir, path.join(DIST, dir));
   }

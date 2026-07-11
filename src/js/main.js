@@ -13,6 +13,13 @@
     });
   }
 
+  // Affiche le message d'erreur renvoyé par scripts/contact.php
+  // (redirection vers contact.html?erreur=champs|envoi).
+  var erreurBox = document.getElementById('form-erreur');
+  if (erreurBox && /[?&]erreur=/.test(location.search)) {
+    erreurBox.hidden = false;
+  }
+
   // Marque la page courante dans la navigation (le site est statique,
   // on évite de dupliquer cette logique dans chaque page).
   var current = location.pathname.split('/').pop() || 'index.html';
