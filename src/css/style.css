@@ -1141,23 +1141,31 @@ body { overflow-x: clip; }
 .contact-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
-  gap: clamp(2rem, 5vw, 4rem);
-  align-items: start;
+  gap: clamp(1.5rem, 3vw, 2.5rem);
+}
+
+/* Deux cartes blanches symétriques (coordonnées / formulaire),
+   le plan d'accès en pleine largeur dessous. */
+.contact-card {
+  background: var(--blanc);
+  border-radius: var(--rayon);
+  box-shadow: var(--ombre);
+  padding: clamp(1.5rem, 3vw, 2.25rem);
+}
+
+.contact-card > :last-child { margin-bottom: 0; }
+
+.contact-map {
+  margin-top: clamp(1.5rem, 3vw, 2.5rem);
 }
 
 .contact-map iframe {
   width: 100%;
-  height: 320px;
+  height: 380px;
   border: 0;
   border-radius: var(--rayon);
   box-shadow: var(--ombre);
-}
-
-.contact-form {
-  background: var(--blanc);
-  border-radius: var(--rayon);
-  box-shadow: var(--ombre);
-  padding: clamp(1.25rem, 3vw, 2rem);
+  display: block;
 }
 
 .contact-form label {

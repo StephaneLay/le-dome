@@ -1,0 +1,10 @@
+# Brasserie Le Dôme — configuration Apache (hébergement Strato)
+
+# Page d'erreur personnalisée
+ErrorDocument 404 /404.html
+
+# Redirections 301 depuis les URL de l'ancien site (étape SEO — à compléter
+# et activer au moment du déploiement, avec le domaine définitif) :
+# Redirect 301 /reservations.html /reservation.html
+# Redirect 301 /credits.html /mentions-legales.html
+# RedirectMatch 301 ^/phone/(.*)$ /$1

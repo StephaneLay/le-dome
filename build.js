@@ -200,6 +200,10 @@ function build() {
     if (fs.existsSync(srcDir)) copyDir(srcDir, path.join(DIST, dir));
   }
 
+  // Fichiers destinés à la racine du site (.htaccess, robots.txt…)
+  const racineDir = path.join(SRC, 'racine');
+  if (fs.existsSync(racineDir)) copyDir(racineDir, DIST);
+
   console.log(`\nBuild terminé -> ${DIST}`);
 }
 
