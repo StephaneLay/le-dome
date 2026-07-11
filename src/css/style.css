@@ -653,26 +653,60 @@ html { scroll-behavior: smooth; }
 
 /* --- Page menu ------------------------------------------------------------ */
 
-/* Bandeau « du petit déjeuner au goûter » en haut de la carte. */
-.menu-highlight {
-  padding-block: clamp(2rem, 4vw, 3rem);
+/* Petit déjeuner / goûter : deux cartes compactes sous le sommaire,
+   volontairement discrètes pour laisser la vedette à la carte. */
+.services {
+  padding-block: clamp(1.5rem, 3vw, 2.25rem) 0;
 }
 
-.menu-highlight__grid {
+.services__grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
-  gap: clamp(1.5rem, 4vw, 3rem);
-  align-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+  gap: 1.25rem;
   max-width: 52rem;
 }
 
-.menu-highlight__img {
-  width: 100%;
-  aspect-ratio: 1;
-  object-fit: cover;
-  object-position: 50% 62%;
+.service-card {
+  display: flex;
+  align-items: center;
+  gap: 1.1rem;
+  background: var(--blanc);
   border-radius: var(--rayon);
   box-shadow: var(--ombre);
+  padding: 0.9rem 1.1rem;
+}
+
+.service-card img {
+  width: 88px;
+  height: 88px;
+  flex-shrink: 0;
+  object-fit: cover;
+  object-position: 50% 62%;
+  border-radius: 50%;
+}
+
+.service-card h2 {
+  font-size: 1.1rem;
+  margin-bottom: 0.15rem;
+}
+
+.service-card__time {
+  display: inline-block;
+  font-family: var(--font-texte);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--blanc);
+  background: var(--ambre);
+  border-radius: 999px;
+  padding: 0.1rem 0.6rem;
+  margin-left: 0.35rem;
+  vertical-align: middle;
+}
+
+.service-card p {
+  margin: 0;
+  font-size: 0.92rem;
+  color: rgba(36, 19, 24, 0.75);
 }
 
 .menu-toc {

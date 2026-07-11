@@ -29,26 +29,33 @@
     </div>
   </div>
 
-  <section class="section menu-highlight">
-    <div class="container menu-highlight__grid">
-      <img class="menu-highlight__img" src="images/petit-dejeuner.jpg"
-        alt="Petit déjeuner : croissant, café et jus d'orange pressée"
-        loading="lazy" width="2656" height="3984">
-      <div>
-        <span class="section__eyebrow">À toute heure</span>
-        <h2>Du petit déjeuner au goûter</h2>
-        <p>Dès 8h00, petit déjeuner : croissants, pains au chocolat et jus
-        d'orange pressée.</p>
-        <p>Et à partir de 14h30, place au goûter : crêpes, gaufres, glaces
-        artisanales et desserts maison.</p>
-      </div>
-    </div>
-  </section>
-
   <!-- TODO ALLERGÈNES : obligation d'information (règlement INCO) — récupérer
        la liste des allergènes auprès du client et décider du support
        (mention par plat dans menu.json ou note générale + document en salle). -->
   {{MENU_TOC}}
+
+  <section class="services">
+    <div class="container services__grid">
+      <article class="service-card">
+        <img src="images/petit-dejeuner.jpg"
+          alt="Petit déjeuner : croissant, café et jus d'orange pressée"
+          loading="lazy" width="2656" height="3984">
+        <div>
+          <h2>Petit déjeuner <span class="service-card__time">dès 8h00</span></h2>
+          <p>Croissants, pains au chocolat, jus d'orange pressée.</p>
+        </div>
+      </article>
+      <article class="service-card">
+        <img src="images/cafe.webp"
+          alt="Douceurs et café"
+          loading="lazy" width="1103" height="1012">
+        <div>
+          <h2>Le goûter <span class="service-card__time">dès 14h30</span></h2>
+          <p>Crêpes, gaufres, glaces artisanales et desserts maison.</p>
+        </div>
+      </article>
+    </div>
+  </section>
 
   <section class="section">
     <div class="container menu-wrap">

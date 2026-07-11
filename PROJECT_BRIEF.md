@@ -36,7 +36,7 @@ Ce document résume toutes les décisions prises et informations collectées ava
 - `photo-salade-lyonnaise.jpg` — photo pro haute résolution, correspond à la « Salade lyonnaise » (lardons, œuf poché).
 - `photo-boeuf-carpaccio.jpg` — photo pro haute résolution, viande fine tranchée + frites. Association avec un plat précis de la carte incertaine (le descriptif du carpaccio de la carte ne mentionne pas de frites) — à confirmer avec le client pour la légende/alt text.
 - Une 4e photo (dessert) était annoncée par le client mais pas encore reçue au moment de ce brief.
-- **Signature visuelle retenue** : les 3 photos partagent une lumière en rayures caractéristique (ombre de store/pergola). C'est un motif à exploiter comme fil conducteur visuel du site (traitement photo cohérent, séparateurs de section, etc.) plutôt qu'un hasard à gommer.
+- **Signature visuelle retenue** : les 3 photos partagent une lumière en rayures caractéristique (ombre de store — attention : il n'y a PAS de pergola sur la terrasse, confirmé par le client le 11/07/2026, ne pas employer ce mot dans les textes). Motif finalement abandonné dans le design au profit de formes rondes (préférence client).
 
 ## Menu (dans `src/data/menu.json`)
 
