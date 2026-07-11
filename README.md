@@ -60,9 +60,6 @@ Chaque point est aussi marqué `TODO` en commentaire dans le fichier concerné :
 
 - [ ] **Prix du petit déjeuner** : le 7,50 € dans `src/data/menu.json` est un
       prix factice — demander le vrai prix
-- [ ] **Photo petit déjeuner** (viennoiseries, café, jus d'orange pressée) :
-      un emplacement lui est réservé en haut de la page carte
-      (`src/pages/menu.html`)
 - [ ] **Allergènes** : obligation d'information (règlement INCO) — récupérer
       la liste auprès du client et décider du support (mention par plat dans
       `menu.json` ou note générale renvoyant à un document en salle)
@@ -94,10 +91,9 @@ Chaque point est aussi marqué `TODO` en commentaire dans le fichier concerné :
 - [ ] **Prix en page d'accueil** : les 3 plats signature ont leur prix en dur
       dans `index.html` — vérifier qu'ils correspondent à `menu.json` à chaque
       mise à jour de carte
-- [ ] **Logo source à recadrer un jour** : le JPG a un bandeau noir en haut,
-      masqué pour l'instant par un zoom CSS dans les vignettes rondes
-      (`.logo-circle`) — recadrer le fichier serait plus propre (le favicon
-      l'affiche encore)
+- [ ] **Poids des images** : `terrasse.jpg` et `petit-dejeuner.jpg` sont des
+      photos brutes de plusieurs Mo — les redimensionner/compresser avant la
+      mise en ligne (vitesse de chargement = SEO)
 
 ## Notes techniques
 

@@ -10,7 +10,8 @@
   <meta property="og:type" content="website">
   <meta property="og:locale" content="fr_FR">
   <!-- TODO : ajouter <link rel="canonical">, og:url et og:image (URL absolues) une fois le domaine définitif confirmé -->
-  <link rel="icon" href="images/logo-le-dome.jpg">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="alternate icon" href="images/logo-le-dome.jpg">
   <link rel="preload" href="fonts/bitter-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/worksans-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/style.css">
@@ -60,18 +61,19 @@
   <section class="hero">
     <img class="hero__bg" src="images/photo-boeuf-carpaccio.jpg" alt="" fetchpriority="high">
     <div class="container">
-      <span class="section__eyebrow">Brasserie &amp; restaurant — Caluire</span>
-      <h1 class="hero__title">Le Dôme</h1>
-      <p class="hero__tagline">Cuisine maison <span class="dot">·</span> Cocktails <span class="dot">·</span> Tapas</p>
-      <div class="divider" aria-hidden="true"><span></span><span></span><span></span></div>
-      <div class="hero__actions">
-        <a class="btn btn--primary" href="menu.html">Découvrir la carte</a>
-        <a class="btn btn--outline" href="reservation.html">Réserver une table</a>
+      <div class="hero__panel">
+        <h1 class="visually-hidden">Brasserie Le Dôme — restaurant à Caluire</h1>
+        <img class="hero__brand" src="images/logo-le-dome.jpg" alt="" width="1043" height="798">
+        <span class="section__eyebrow">Caluire — Centre Commercial Auchan</span>
+        <p class="hero__tagline">Cuisine maison <span class="dot">·</span> Cocktails <span class="dot">·</span> Tapas</p>
+        <div class="divider" aria-hidden="true"><span></span><span></span><span></span></div>
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="menu.html">Découvrir la carte</a>
+          <a class="btn btn--outline" href="reservation.html">Réserver une table</a>
+        </div>
       </div>
     </div>
   </section>
-
-  <div class="divider" aria-hidden="true"><span></span><span></span><span></span></div>
 
   <section class="section">
     <div class="container intro">
@@ -174,7 +176,10 @@
         </div>
         <div class="practical__item">
           <h3>Horaires</h3>
-          <p>Lundi – samedi : 8h00 – 19h00<br>Jeudi et vendredi : jusqu'à 21h00<br>Dimanche : fermé</p>
+          <p>Lundi, mardi, mercredi : 8h00 – 19h00<br>
+          Jeudi et vendredi : 8h00 – 21h00<br>
+          Samedi : 8h00 – 19h00<br>
+          Dimanche : fermé</p>
         </div>
         <div class="practical__item">
           <h3>Réservation</h3>
