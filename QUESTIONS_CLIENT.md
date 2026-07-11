@@ -24,8 +24,8 @@ Tout ce qui manque pour finaliser le site. Cocher au fur et à mesure.
 
 ## Administratif (mentions légales)
 
-- [ ] Capital social de la SAS
-- [ ] Numéro de TVA intracommunautaire
+- [x] Capital social de la SAS — 40 000,00 € (intégré)
+- [x] Numéro de TVA intracommunautaire — FR15398800466 (intégré)
 - [ ] Durée de conservation des e-mails du formulaire de contact (proposer : 12 mois)
 - [ ] La boîte brasserie@ledome.fr reste-t-elle active ? (le formulaire du nouveau site enverra vers brasserie.ledome@gmail.com)
 

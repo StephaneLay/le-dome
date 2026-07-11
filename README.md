@@ -74,9 +74,9 @@ Chaque point est aussi marqué `TODO` en commentaire dans le fichier concerné :
 - [x] **Avis clients** : 3 vrais extraits Google en place (Cécile C., Elsa D.,
       Thiago F. 4★), note 4/5 · 284 avis confirmée sur la fiche — montrer au
       client pour information
-- [ ] **Mentions légales** : il manque encore le capital social et le n° de
-      TVA intracommunautaire (SIRET, forme juridique et directeur de
-      publication sont renseignés)
+- [x] **Mentions légales** : complètes (SAS au capital de 40 000 €, SIRET,
+      TVA FR15398800466, directeur de publication) — ne reste que la
+      vérification de l'adresse STRATO AG (item dédié plus bas)
 - [ ] **Carte PDF** : comparer avec `src/data/menu.json` et corriger
 - [ ] **Photo carpaccio** : confirmer qu'elle correspond bien au plat de la
       carte (frites non mentionnées dans le descriptif)
