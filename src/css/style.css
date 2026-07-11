@@ -1045,6 +1045,91 @@ html { scroll-behavior: smooth; }
   font-weight: 600;
 }
 
+/* --- Micro-interactions et apparitions au défilement ------------------------ */
+/* L'intégralité est neutralisée si l'utilisateur préfère réduire les
+   animations ; sans JavaScript, rien n'est masqué (la classe .reveal est
+   posée par main.js). */
+
+@media (prefers-reduced-motion: no-preference) {
+  .reveal {
+    opacity: 0;
+    translate: 0 26px;
+    transition: opacity 0.65s ease-out, translate 0.65s ease-out;
+    transition-delay: var(--reveal-delay, 0s);
+  }
+
+  .reveal.is-visible {
+    opacity: 1;
+    translate: 0 0;
+  }
+
+  /* Lent zoom d'ouverture sur la photo du hero. */
+  .hero { overflow: hidden; }
+
+  .hero__bg {
+    animation: hero-zoom 14s ease-out forwards;
+  }
+
+  @keyframes hero-zoom {
+    from { scale: 1.06; }
+    to { scale: 1; }
+  }
+
+  .btn {
+    transition: background var(--transition), color var(--transition),
+      border-color var(--transition), translate var(--transition),
+      box-shadow var(--transition);
+  }
+
+  .btn:hover {
+    translate: 0 -2px;
+    box-shadow: 0 8px 18px rgba(36, 19, 24, 0.18);
+  }
+
+  .btn:active {
+    translate: 0 0;
+    box-shadow: none;
+  }
+
+  .dish-card,
+  .service-card {
+    transition: translate 0.25s ease, box-shadow 0.25s ease;
+  }
+
+  .dish-card:hover,
+  .service-card:hover {
+    translate: 0 -6px;
+    box-shadow: 0 16px 36px rgba(36, 19, 24, 0.16);
+  }
+
+  .dish-card img {
+    transition: scale 0.45s ease;
+  }
+
+  .dish-card:hover img {
+    scale: 1.05;
+  }
+
+  .gallery img,
+  .gallery__tile {
+    transition: scale 0.3s ease, filter 0.3s ease;
+  }
+
+  .gallery img:hover {
+    scale: 1.025;
+    filter: brightness(1.06);
+  }
+
+  .menu-toc a {
+    transition: background var(--transition), color var(--transition),
+      translate var(--transition);
+  }
+
+  .menu-toc a:hover {
+    translate: 0 -1px;
+  }
+}
+
 /* --- Pied de page ------------------------------------------------------------ */
 
 .site-footer {
