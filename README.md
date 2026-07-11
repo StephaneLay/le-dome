@@ -62,11 +62,13 @@ Chaque point est aussi marqué `TODO` en commentaire dans le fichier concerné :
 
 À demander au client :
 
-- [ ] **Prix du petit déjeuner** : le 7,50 € dans `src/data/menu.json` est un
-      prix factice — demander le vrai prix
-- [ ] **Allergènes** : obligation d'information (règlement INCO) — récupérer
-      la liste auprès du client et décider du support (mention par plat dans
-      `menu.json` ou note générale renvoyant à un document en salle)
+- [ ] **Prix du petit déjeuner** : le 7,50 € affiché sur la carte visuelle
+      petit déjeuner (`src/pages/menu.html`) est un prix factice — demander
+      le vrai prix
+- [ ] **Allergènes** : la mention légale « disponible en salle » est en place
+      en bas de la page carte — récupérer le document du client pour le
+      publier en lien, puis lui générer un QR code pointant vers
+      `ledome.fr/menu.html#allergenes` pour ses menus imprimés
 - [ ] **Textes « Chez nous »** (`src/pages/chez-nous.html`) : remplacer les
       textes provisoires après l'entretien avec le client
 - [ ] **Avis clients** (`src/pages/index.html`) : remplacer les 3 avis
