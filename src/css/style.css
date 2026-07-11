@@ -238,6 +238,7 @@ body { overflow-x: clip; }
 .reviews h2::after,
 .cta-resa h2::after,
 .galerie h2::after,
+.groupes-cta h2::after,
 .about-block h2::after {
   content: '';
   display: block;
@@ -253,7 +254,8 @@ body { overflow-x: clip; }
 .commitments h2::after,
 .dishes__intro h2::after,
 .reviews h2::after,
-.cta-resa h2::after {
+.cta-resa h2::after,
+.groupes-cta h2::after {
   margin-inline: auto;
 }
 
@@ -420,7 +422,7 @@ body { overflow-x: clip; }
   transform: translateY(-8px) rotate(-45deg);
 }
 
-@media (max-width: 860px) {
+@media (max-width: 1020px) {
   .site-header__burger { display: block; }
 
   .site-nav {
@@ -1133,7 +1135,45 @@ body { overflow-x: clip; }
   text-align: left;
 }
 
-.booking__groups { margin-top: 2.5rem; margin-bottom: 0; }
+.booking__groups-link { margin: 2rem 0 0; }
+
+/* --- Page groupes & entreprises -------------------------------------------- */
+
+.groupes-args {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  gap: 1.5rem;
+  margin-bottom: clamp(3rem, 6vw, 4.5rem);
+}
+
+.arg-card {
+  background: var(--blanc);
+  border-radius: var(--rayon);
+  box-shadow: var(--ombre);
+  padding: 1.75rem 1.5rem;
+}
+
+.arg-card h3 {
+  color: var(--framboise);
+  margin-bottom: 0.5rem;
+}
+
+.arg-card p { margin: 0; }
+
+.groupes-cta {
+  text-align: center;
+}
+
+.groupes-cta p {
+  max-width: 34rem;
+  margin-inline: auto;
+}
+
+.groupes-cta__note {
+  margin-top: 1.5rem;
+  font-size: 0.95rem;
+  color: rgba(36, 19, 24, 0.75);
+}
 
 /* --- Page contact ----------------------------------------------------------- */
 

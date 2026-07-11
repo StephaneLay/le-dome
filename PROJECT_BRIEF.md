@@ -121,7 +121,7 @@ Racine web du pack (= racine de ledome.fr). Sauvegarde complète locale dans `le
 
 ## Sitemap proposé (à valider avec le client)
 
-Accueil, Chez nous, Menu, Réservation, Contact, Mentions légales, Politique de confidentialité — environ 7 pages.
+Accueil, Chez nous, Menu, Réservation, Groupes &amp; entreprises (ajoutée le 11/07/2026 à la demande du client), Contact, Mentions légales, Politique de confidentialité — plus les pages techniques merci et 404.
 
 ## Approche technique
 

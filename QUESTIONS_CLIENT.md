@@ -18,6 +18,13 @@ Tout ce qui manque pour finaliser le site. Cocher au fur et à mesure.
 - [ ] La photo « viande + frites » : est-ce bien le carpaccio de bœuf de la carte ? (le descriptif ne mentionne pas de frites)
 - [ ] Les réservations Dish restent uniquement pour le midi ? (on garde tel quel pour l'instant)
 
+## Page Groupes & entreprises (nouvelle)
+
+- [ ] Capacité maximale (combien de convives en salle ? en terrasse ?)
+- [ ] Privatisation possible (totale ou partielle) ?
+- [ ] Menus/formules groupes prédéfinis, ou toujours sur mesure ?
+- [ ] Valider les 3 arguments affichés (déjeuners d'affaires, fêtes/anniversaires, simplicité)
+
 ## Avis clients
 
 - [ ] Choisir ensemble 3 avis Google à afficher sur l'accueil (ou me laisser les choisir dans la fiche Google Business)
