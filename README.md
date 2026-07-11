@@ -71,8 +71,9 @@ Chaque point est aussi marqué `TODO` en commentaire dans le fichier concerné :
       `ledome.fr/menu.html#allergenes` pour ses menus imprimés
 - [ ] **Textes « Chez nous »** (`src/pages/chez-nous.html`) : remplacer les
       textes provisoires après l'entretien avec le client
-- [ ] **Avis clients** (`src/pages/index.html`) : remplacer les 3 avis
-      provisoires par de vrais avis Google Business Profile
+- [x] **Avis clients** : 3 vrais extraits Google en place (Cécile C., Elsa D.,
+      Thiago F. 4★), note 4/5 · 284 avis confirmée sur la fiche — montrer au
+      client pour information
 - [ ] **Mentions légales** : il manque encore le capital social et le n° de
       TVA intracommunautaire (SIRET, forme juridique et directeur de
       publication sont renseignés)

@@ -39,7 +39,7 @@
       '.hero__panel, .intro, .dishes__intro, .about-block, .menu-category, ' +
       '.booking__phone, .booking__widget, .booking__groups, ' +
       '.contact-grid > div, .contact-map, ' +
-      '.reviews h2, .practical h2, .commitments h2, .galerie h2, .legal > *'
+      '.reviews h2, .cta-resa .container, .commitments h2, .galerie h2, .legal > *'
     ).forEach(function (bloc) {
       bloc.classList.add('reveal');
       observateur.observe(bloc);
@@ -48,7 +48,7 @@
     // Grilles : les enfants apparaissent en léger décalé.
     document.querySelectorAll(
       '.dishes__grid, .reviews__grid, .commitments__grid, .gallery, ' +
-      '.practical__grid, .services__grid'
+      '.services__grid'
     ).forEach(function (grille) {
       Array.prototype.forEach.call(grille.children, function (enfant, i) {
         enfant.classList.add('reveal');
