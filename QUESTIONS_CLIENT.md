@@ -12,8 +12,8 @@ Tout ce qui manque pour finaliser le site. Cocher au fur et à mesure.
 
 ## Carte & services
 
-- [ ] Le vrai prix de la formule petit déjeuner (7,50 € affiché actuellement = provisoire) — et son contenu exact (boisson chaude incluse ?)
-- [ ] La carte PDF complète et à jour (pour vérifier tous les prix/plats du site)
+- [x] Prix de la formule petit déjeuner — à partir de 5,40 € (intégré)
+- [x] Carte complète — captures reçues et intégrées le 12/07/2026 (cocktails, tapas, goûter, glaces, boissons) ; dernière vérification croisée à faire ensemble avant mise en ligne
 - [ ] Le document allergènes à jour ⚠️ l'ancien QR code affiche « hello :) » — on publiera le document sur le site et on générera un nouveau QR code sérieux pour les menus imprimés
 - [ ] La photo « viande + frites » : est-ce bien le carpaccio de bœuf de la carte ? (le descriptif ne mentionne pas de frites)
 - [ ] Les réservations Dish restent uniquement pour le midi ? (on garde tel quel pour l'instant)

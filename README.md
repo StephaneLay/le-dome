@@ -62,9 +62,8 @@ Chaque point est aussi marqué `TODO` en commentaire dans le fichier concerné :
 
 À demander au client :
 
-- [ ] **Prix du petit déjeuner** : le 7,50 € affiché sur la carte visuelle
-      petit déjeuner (`src/pages/menu.html`) est un prix factice — demander
-      le vrai prix
+- [x] **Prix du petit déjeuner** : formule à partir de 5,40 € (café 1,90 €,
+      viennoiserie 1,50 €) — affiché sur la carte visuelle de `menu.html`
 - [ ] **Allergènes** : la mention légale « disponible en salle » est en place
       en bas de la page carte — récupérer le document du client pour le
       publier en lien, puis lui générer un QR code pointant vers

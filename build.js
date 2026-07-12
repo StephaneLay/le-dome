@@ -93,6 +93,16 @@ function renderCategory(cat) {
     return `<p class="menu-note">${esc(cat.text)}</p>`;
   }
 
+  // Liste sans prix (ex. : parfums de glaces) — nom + description seulement.
+  if (cat.type === 'list') {
+    const items = cat.items.map((item) => `
+      <li class="menu-item menu-item--list">
+        <span class="menu-item__name">${esc(item.name)}</span>
+        ${item.description ? `<p class="menu-item__desc">${esc(item.description)}</p>` : ''}
+      </li>`).join('');
+    return `<ul class="menu-category__list menu-category__list--compact">${items}</ul>`;
+  }
+
   return '';
 }
 
@@ -100,10 +110,14 @@ function buildMenuHtml() {
   const menu = loadMenu();
   if (!menu) return '<p>Menu à venir.</p>';
 
+  // intro : phrase d'introduction sous le titre ; footnote : mention en
+  // petit après les items (suppléments, provenance…). Tous deux optionnels.
   const sections = menu.categories.map((cat) => `
     <section class="menu-category menu-category--${cat.type}" id="menu-${esc(cat.id)}">
       <h2 class="menu-category__title">${esc(cat.title)}</h2>
+      ${cat.intro ? `<p class="menu-category__intro">${esc(cat.intro)}</p>` : ''}
       ${renderCategory(cat)}
+      ${cat.footnote ? `<p class="menu-category__footnote">${esc(cat.footnote)}</p>` : ''}
     </section>`).join('\n');
 
   const disclaimers = menu.disclaimers ? `

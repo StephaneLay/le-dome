@@ -929,6 +929,29 @@ body { overflow-x: clip; }
   padding: 0;
 }
 
+/* Introduction et mention de bas de catégorie (optionnelles). */
+.menu-category__intro {
+  font-family: var(--font-titres);
+  font-style: italic;
+  color: rgba(36, 19, 24, 0.75);
+  margin: -0.2rem 0 1.1rem;
+}
+
+.menu-category__footnote {
+  margin: 0.75rem 0 0;
+  font-size: 0.85rem;
+  color: rgba(36, 19, 24, 0.65);
+}
+
+/* Listes sans prix (parfums de glaces) : deux colonnes compactes. */
+.menu-category__list--compact {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: 0.35rem 2rem;
+}
+
+.menu-item--list { margin-bottom: 0.5rem; }
+
 .menu-item { margin-bottom: 1.15rem; }
 
 .menu-item__row {

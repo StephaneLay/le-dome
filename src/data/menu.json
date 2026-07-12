@@ -6,6 +6,24 @@
   },
   "categories": [
     {
+      "id": "formule-midi",
+      "title": "Formule du midi",
+      "type": "formula",
+      "price": 17.50,
+      "subtitle": "Du lundi au vendredi, hors jours fériés",
+      "components": [
+        "Plat du jour ou pièce du boucher (13.90 seul)",
+        "+ dessert du jour ou fromage blanc ou salade de fruits"
+      ],
+      "supplement": "Supplément 2,00 € pour un dessert à la carte ou le café gourmand"
+    },
+    {
+      "id": "suggestion-chef",
+      "title": "Suggestion du chef",
+      "type": "note",
+      "text": "À découvrir sur l'ardoise, demandez à votre serveur"
+    },
+    {
       "id": "salades",
       "title": "Salades",
       "type": "simple",
@@ -39,24 +57,6 @@
       ]
     },
     {
-      "id": "formule-midi",
-      "title": "Formule du midi",
-      "type": "formula",
-      "price": 17.50,
-      "subtitle": "Du lundi au vendredi, hors jours fériés",
-      "components": [
-        "Plat du jour ou pièce du boucher (13.90 seul)",
-        "+ dessert du jour ou fromage blanc ou salade de fruits"
-      ],
-      "supplement": "Supplément 2,00 € pour un dessert à la carte ou le café gourmand"
-    },
-    {
-      "id": "suggestion-chef",
-      "title": "Suggestion du chef",
-      "type": "note",
-      "text": "À découvrir sur l'ardoise, demandez à votre serveur"
-    },
-    {
       "id": "viandes",
       "title": "Les viandes",
       "type": "simple",
@@ -83,6 +83,21 @@
       ]
     },
     {
+      "id": "tapas",
+      "title": "Les tapas & à partager",
+      "type": "simple",
+      "items": [
+        { "name": "Planche charcuterie", "price": 15.50, "description": null },
+        { "name": "Planche fromage", "price": 13.50, "description": null },
+        { "name": "Planche mixte", "price": 24.00, "description": null },
+        { "name": "Houmous", "price": 6.50, "description": null },
+        { "name": "Guacamole & tortillas chips", "price": 6.50, "description": null },
+        { "name": "Tapenade d'olives", "price": 6.50, "description": null },
+        { "name": "Le trio", "price": 12.00, "description": null },
+        { "name": "Grande assiette de frites à partager", "price": 7.00, "description": null }
+      ]
+    },
+    {
       "id": "fromages",
       "title": "Fromages",
       "type": "simple",
@@ -104,7 +119,124 @@
         { "name": "L'île flottante aux pralines", "price": 6.50, "description": null },
         { "name": "Pavlova ananas avec son caramel au gingembre", "price": 6.50, "description": null },
         { "name": "Tiramisu", "price": 7.90, "description": null },
-        { "name": "Café gourmand", "price": 7.90, "description": "Supplément 1 € pour une grande boisson chaude" }
+        { "name": "Café gourmand", "price": 8.00, "description": "3 petits desserts maison — supplément 1 € pour une grande boisson chaude" }
+      ]
+    },
+    {
+      "id": "crepes-gaufres",
+      "title": "Crêpes & gaufres",
+      "type": "simple",
+      "intro": "Le goûter, tous les jours à partir de 14h30.",
+      "items": [
+        { "name": "Crêpe ou gaufre au sucre", "price": 4.00, "description": null },
+        { "name": "Crêpe ou gaufre garnie", "price": 4.50, "description": "Nutella, chantilly ou crème de marrons" }
+      ]
+    },
+    {
+      "id": "glaces-coupe",
+      "title": "Les glaces — composez votre coupe",
+      "type": "simple",
+      "items": [
+        { "name": "1 boule", "price": 2.80, "description": null },
+        { "name": "2 boules", "price": 4.90, "description": null },
+        { "name": "3 boules", "price": 6.90, "description": null },
+        { "name": "Supplément chantilly", "price": 1.50, "description": null },
+        { "name": "Sauce chocolat, caramel, café ou coulis de fruit", "price": 1.50, "description": null }
+      ]
+    },
+    {
+      "id": "coupes-glacees",
+      "title": "Nos coupes glacées",
+      "type": "simple",
+      "items": [
+        { "name": "Coupe du Dôme", "price": 7.50, "description": "1 boule yaourt bulgare, 1 boule framboise, 1 boule fraise, coulis de fruits rouges, chantilly" },
+        { "name": "Café liégeois", "price": 7.50, "description": "2 boules café, 1 boule vanille, vrai café, chantilly" },
+        { "name": "Chocolat liégeois", "price": 7.50, "description": "2 boules chocolat, 1 boule vanille, nappage chocolat, chantilly" },
+        { "name": "Dame blanche", "price": 7.50, "description": "3 boules vanille, nappage chocolat, chantilly" },
+        { "name": "Coupe fraîcheur", "price": 7.50, "description": "1 boule melon, 1 boule pêche blanche jasmin, 1 boule citron jaune, fruits frais, chantilly" }
+      ]
+    },
+    {
+      "id": "coupes-alcoolisees",
+      "title": "Nos coupes alcoolisées",
+      "type": "simple",
+      "items": [
+        { "name": "Coupe des îles", "price": 9.00, "description": "1 boule mangue, 1 boule noix de coco, rhum" },
+        { "name": "Coupe colonel", "price": 9.00, "description": "2 boules citron jaune, vodka" },
+        { "name": "L'After Eight", "price": 9.00, "description": "2 boules menthe chocolat, Get 27" }
+      ]
+    },
+    {
+      "id": "parfums-glaces",
+      "title": "Nos parfums — glaces artisanales",
+      "type": "list",
+      "intro": "Glaces artisanales « Glaces des Alpes », maître artisan glacier.",
+      "items": [
+        { "name": "Vanille", "description": "Glace aux oeufs, à la vanille Bourbon de Madagascar et beurre d'Échiré" },
+        { "name": "Chocolat", "description": "Au chocolat noir, au cacao et coeur de Guanaja 80 % Valrhona" },
+        { "name": "Café", "description": "Café 100 % arabica" },
+        { "name": "Pistache", "description": "À la pâte de pistache de Sicile et éclats de pistaches" },
+        { "name": "Caramel beurre salé", "description": "Au caramel, au beurre et au sel de Guérande" },
+        { "name": "Rhum raisin", "description": "Au rhum Saint-James et raisins Golden Choice avec macération maison" },
+        { "name": "Fraise", "description": "Glace à la fraise" },
+        { "name": "Noix de coco", "description": "Au lait et pâte de noix de coco, coco râpée" },
+        { "name": "Menthe chocolat", "description": "Glace à la menthe, copeaux de chocolat noir 61 %" },
+        { "name": "Bulgare", "description": "Au goût unique du yaourt bulgare" }
+      ]
+    },
+    {
+      "id": "parfums-sorbets",
+      "title": "Nos parfums — sorbets plein fruit",
+      "type": "list",
+      "footnote": "La liste des allergènes des glaces et sorbets Glaces des Alpes est à votre disposition en salle.",
+      "items": [
+        { "name": "Mangue", "description": "Mangue Alphonso et Totapuri. 45 % de fruits" },
+        { "name": "Cassis", "description": "Cassis noir de Bourgogne. 49 % de fruits" },
+        { "name": "Pêche blanche, jasmin", "description": "Sorbet pêche blanche délicatement parfumé aux extraits de jasmin. 60 % de fruits" },
+        { "name": "Citron", "description": "Citron de Sicile. 29 % de fruits" },
+        { "name": "Framboise", "description": "Framboise. 52 % de fruits" },
+        { "name": "Melon", "description": "Melon Charentais. 49 % de fruits" }
+      ]
+    },
+    {
+      "id": "cocktails",
+      "title": "Les cocktails",
+      "type": "simple",
+      "items": [
+        { "name": "Mojito", "price": 8.00, "description": "Rhum, sucre de canne, citron vert, feuilles de menthe, eau gazeuse" },
+        { "name": "Mojito fruits rouges", "price": 9.00, "description": "Rhum, sucre de canne, citron vert, feuilles de menthe, eau gazeuse, coulis de fruits rouges" },
+        { "name": "Pina colada", "price": 8.00, "description": "Rhum, jus d'ananas, lait de coco" },
+        { "name": "Moscow mule", "price": 8.00, "description": "Vodka, ginger beer, citron vert" },
+        { "name": "Cuba libre", "price": 8.00, "description": "Rhum, Coca-Cola, citron vert" },
+        { "name": "Cocktail maison", "price": 9.00, "description": "Selon l'humeur du barman" },
+        { "name": "Spritz", "price": 8.00, "description": "Apérol, tranche d'orange, prosecco et eau gazeuse" },
+        { "name": "Hugo Spritz", "price": 9.00, "description": "Liqueur de fleur de sureau, prosecco et eau gazeuse" },
+        { "name": "June Spritz", "price": 9.00, "description": "Gin June, sirop de poire, prosecco et eau gazeuse" }
+      ]
+    },
+    {
+      "id": "cocktails-sans-alcool",
+      "title": "Les cocktails sans alcool",
+      "type": "simple",
+      "items": [
+        { "name": "Virgin mojito", "price": 7.00, "description": null },
+        { "name": "Virgin colada", "price": 7.00, "description": null },
+        { "name": "Senza Spritz", "price": 7.00, "description": null },
+        { "name": "L'Exotique", "price": 6.50, "description": null }
+      ]
+    },
+    {
+      "id": "aperitifs",
+      "title": "Apéritifs",
+      "type": "simple",
+      "items": [
+        { "name": "Kir (12 cl)", "price": 4.00, "description": null },
+        { "name": "Apéritif maison « La bulle rosé », Domaine des Palais", "price": 5.00, "description": null },
+        { "name": "Kir royal (12 cl)", "price": 4.80, "description": null },
+        { "name": "Coupe de Crémant", "price": 6.00, "description": null },
+        { "name": "Ricard, Pastis (2 cl)", "price": 3.40, "description": null },
+        { "name": "Suze, Martini (4 cl)", "price": 4.50, "description": null },
+        { "name": "Porto rouge ou blanc (4 cl)", "price": 4.50, "description": null }
       ]
     },
     {
@@ -166,19 +298,43 @@
       ]
     },
     {
-      "id": "aperitif-maison",
-      "title": "Apéritif maison",
+      "id": "softs",
+      "title": "Les softs",
       "type": "simple",
+      "footnote": "Supplément tranche de fruit ou sirop : 0,20 €.",
       "items": [
-        { "name": "La bulle rosé, Domaine des Palais", "price": 5.00, "description": null }
+        { "name": "Coca-Cola, Coca-Cola sans sucres (33 cl)", "price": 3.90, "description": null },
+        { "name": "Schweppes Tonic ou Agrumes, Orangina (25 cl)", "price": 3.90, "description": null },
+        { "name": "Jus de fruits Pago (20 cl)", "price": 3.90, "description": null },
+        { "name": "Thés glacés, Oasis (25 cl)", "price": 3.90, "description": null },
+        { "name": "Diabolo (verre)", "price": 3.00, "description": null },
+        { "name": "Limonade (verre)", "price": 2.80, "description": null },
+        { "name": "Citron ou orange pressé (verre)", "price": 4.80, "description": null }
+      ]
+    },
+    {
+      "id": "boissons-chaudes",
+      "title": "Boissons chaudes",
+      "type": "simple",
+      "footnote": "Supplément tranche de fruit ou lait : 0,20 €.",
+      "items": [
+        { "name": "Café expresso", "price": 1.90, "description": null },
+        { "name": "Café noisette", "price": 2.40, "description": null },
+        { "name": "Café crème", "price": 2.80, "description": null },
+        { "name": "Grand crème, cappuccino", "price": 4.50, "description": null },
+        { "name": "Café viennois", "price": 4.60, "description": null },
+        { "name": "Thé et infusion bio", "price": 3.50, "description": null },
+        { "name": "Chocolat chaud", "price": 3.80, "description": null },
+        { "name": "Chocolat viennois", "price": 4.60, "description": null }
       ]
     },
     {
       "id": "eaux",
       "title": "Les eaux",
       "type": "tiered",
-      "formats": ["50cl", "1l"],
+      "formats": ["33cl", "50cl", "1l"],
       "items": [
+        { "name": "Evian, Badoit rouge", "prices": { "33cl": 3.90 } },
         { "name": "Eau minérale plate ou gazeuse", "prices": { "50cl": 4.00, "1l": 5.50 } }
       ]
     }
