@@ -333,8 +333,8 @@ body { overflow-x: clip; }
   padding-block: 0.5rem;
 }
 
-/* Le fond du logo est le même crème que le site : affiché en fusion
-   « multiply », le lettrage semble peint directement sur la page. */
+/* Logo détouré (PNG transparent) : le lettrage se pose directement sur la
+   barre, sans fond ni cadre. */
 .site-header__brand {
   display: block;
   flex-shrink: 0;
@@ -343,7 +343,6 @@ body { overflow-x: clip; }
 .site-header__brand img {
   height: 62px;
   width: auto;
-  mix-blend-mode: multiply;
 }
 
 .site-nav {
@@ -472,14 +471,19 @@ body { overflow-x: clip; }
   padding-block: 4rem;
 }
 
-.hero__bg {
+/* Diaporama de fond : fondu enchaîné en pur CSS. Sans animation (préférence
+   utilisateur), seule la première photo s'affiche. */
+.hero__slides img {
   position: absolute;
   inset: 0;
   z-index: -2;
   width: 100%;
   height: 100%;
   object-fit: cover;
+  opacity: 0;
 }
+
+.hero__slides img:first-child { opacity: 1; }
 
 /* Overlay clair et léger : la photo reste bien visible, la lisibilité du
    texte est assurée par le panneau crème, pas par l'overlay. */
@@ -510,27 +514,34 @@ body { overflow-x: clip; }
 
 .hero__panel {
   position: relative;
-  max-width: 36rem;
+  max-width: 40rem;
   margin-inline: auto;
-  background: rgba(250, 246, 235, 0.95);
-  backdrop-filter: blur(6px);
-  border-radius: 24px;
-  box-shadow: var(--ombre);
-  padding: 2.25rem 2rem 2.75rem;
+  padding: 1rem;
 }
 
 /* Le logo peint EST le titre du hero (h1 masqué pour le SEO).
-   Double fondu dans le panneau : fusion multiply (le papier crème du logo
-   disparaît dans le crème du panneau) + masque radial qui évanouit
-   progressivement les bords de l'image — plus aucun cadre perceptible. */
+   PNG détouré posé nu sur les photos, avec une lueur crème qui épouse
+   les lettres (drop-shadow sur les formes, pas de cadre). */
 .hero__brand {
-  width: min(340px, 82%);
+  width: min(360px, 85%);
   height: auto;
   margin-inline: auto;
   margin-bottom: 0.9rem;
-  mix-blend-mode: multiply;
-  -webkit-mask-image: radial-gradient(ellipse 74% 70% at 50% 50%, #000 68%, rgba(0, 0, 0, 0.85) 84%, transparent 100%);
-  mask-image: radial-gradient(ellipse 74% 70% at 50% 50%, #000 68%, rgba(0, 0, 0, 0.85) 84%, transparent 100%);
+  filter: drop-shadow(0 0 14px rgba(250, 246, 235, 0.95))
+    drop-shadow(0 0 34px rgba(250, 246, 235, 0.8));
+}
+
+/* Textes du hero : lisibles sur les photos grâce à la même lueur crème. */
+.hero__panel .section__eyebrow,
+.hero__tagline {
+  text-shadow: 0 0 10px rgba(250, 246, 235, 0.95),
+    0 0 22px rgba(250, 246, 235, 0.85),
+    0 0 36px rgba(250, 246, 235, 0.7);
+}
+
+/* Sur photo, le bouton contour passe en fond crème givré. */
+.hero .btn--outline {
+  background: rgba(250, 246, 235, 0.92);
 }
 
 .hero__tagline {
@@ -648,10 +659,13 @@ body { overflow-x: clip; }
 }
 
 .dish-card {
+  display: block;
   background: var(--blanc);
   border-radius: var(--rayon);
   overflow: hidden;
   box-shadow: var(--ombre);
+  color: inherit;
+  text-decoration: none;
 }
 
 .dish-card img {
@@ -662,10 +676,19 @@ body { overflow-x: clip; }
 
 .dish-card__body {
   padding: 1.1rem 1.25rem 1.35rem;
+}
+
+.dish-card__row {
   display: flex;
   align-items: baseline;
   justify-content: space-between;
   gap: 1rem;
+}
+
+.dish-card__desc {
+  margin: 0.35rem 0 0;
+  font-size: 0.92rem;
+  color: rgba(36, 19, 24, 0.75);
 }
 
 .dish-card__name {
@@ -1304,16 +1327,26 @@ body { overflow-x: clip; }
     translate: 0 0;
   }
 
-  /* Lent zoom d'ouverture sur la photo du hero. */
+  /* Diaporama du hero : chaque photo est visible 6 s (cycle de 24 s pour
+     4 photos), avec fondu enchaîné et léger zoom arrière façon Ken Burns. */
   .hero { overflow: hidden; }
 
-  .hero__bg {
-    animation: hero-zoom 14s ease-out forwards;
+  .hero__slides img,
+  .hero__slides img:first-child {
+    opacity: 0;
+    animation: hero-slide 24s infinite;
   }
 
-  @keyframes hero-zoom {
-    from { scale: 1.06; }
-    to { scale: 1; }
+  .hero__slides img:nth-child(2) { animation-delay: 6s; }
+  .hero__slides img:nth-child(3) { animation-delay: 12s; }
+  .hero__slides img:nth-child(4) { animation-delay: 18s; }
+
+  @keyframes hero-slide {
+    0% { opacity: 0; scale: 1.07; }
+    5% { opacity: 1; }
+    25% { opacity: 1; }
+    31% { opacity: 0; scale: 1; }
+    100% { opacity: 0; scale: 1.07; }
   }
 
   .btn {

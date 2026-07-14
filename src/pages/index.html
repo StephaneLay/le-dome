@@ -59,11 +59,16 @@
 <main id="contenu">
 
   <section class="hero">
-    <img class="hero__bg" src="images/photo-boeuf-carpaccio.jpg" alt="" fetchpriority="high">
+    <div class="hero__slides" aria-hidden="true">
+      <img src="images/burger-dome.jpg" alt="" fetchpriority="high" width="1085" height="1088">
+      <img src="images/moules.jpg" alt="" loading="lazy" width="1067" height="1422">
+      <img src="images/photo-boeuf-carpaccio.jpg" alt="" loading="lazy" width="800" height="600">
+      <img src="images/photo-salade-cesar.jpg" alt="" loading="lazy" width="800" height="600">
+    </div>
     <div class="container">
       <div class="hero__panel">
         <h1 class="visually-hidden">Brasserie Le Dôme — restaurant à Caluire</h1>
-        <img class="hero__brand" src="images/logo-le-dome.jpg" alt="" width="1043" height="798">
+        <img class="hero__brand" src="images/logo-le-dome.png" alt="" width="800" height="612">
         <span class="section__eyebrow">Caluire — Centre Commercial Auchan</span>
         <p class="hero__tagline">Cuisine maison <span class="dot">·</span> Cocktails <span class="dot">·</span> Tapas</p>
         <div class="divider" aria-hidden="true"><span></span><span></span><span></span></div>
@@ -115,32 +120,43 @@
   <section class="section section--ambre">
     <div class="container">
       <div class="dishes__intro">
-        <span class="section__eyebrow">La carte</span>
-        <h2>Quelques plats signature</h2>
+        <span class="section__eyebrow">À toute heure</span>
+        <h2>Du petit déjeuner au goûter</h2>
       </div>
       <div class="dishes__grid">
-        <article class="dish-card">
-          <img src="images/photo-salade-cesar.jpg" alt="Salade César : poulet mariné, copeaux de parmesan, croûtons" loading="lazy" width="800" height="600">
+        <a class="dish-card" href="menu.html">
+          <img src="images/petit-dejeuner.jpg" alt="Petit déjeuner : croissant, café et jus d'orange pressée" loading="lazy" width="2656" height="3984">
           <div class="dish-card__body">
-            <h3 class="dish-card__name">Salade César</h3>
-            <span class="dish-card__price">12,90&nbsp;€</span>
+            <div class="dish-card__row">
+              <h3 class="dish-card__name">Petit déjeuner</h3>
+              <span class="dish-card__price">dès 8h00</span>
+            </div>
+            <p class="dish-card__desc">Croissants, pains au chocolat, jus
+            d'orange pressée — formule à partir de 5,40&nbsp;€.</p>
           </div>
-        </article>
-        <article class="dish-card">
+        </a>
+        <a class="dish-card" href="menu.html#menu-formule-midi">
           <img src="images/photo-salade-lyonnaise.jpg" alt="Salade lyonnaise : lardons, croûtons, œuf poché" loading="lazy" width="800" height="600">
           <div class="dish-card__body">
-            <h3 class="dish-card__name">Salade lyonnaise</h3>
-            <span class="dish-card__price">12,90&nbsp;€</span>
+            <div class="dish-card__row">
+              <h3 class="dish-card__name">Le déjeuner</h3>
+              <span class="dish-card__price">formule 17,50&nbsp;€</span>
+            </div>
+            <p class="dish-card__desc">Cuisine maison, formule du midi en
+            semaine et carte complète — pensez à réserver.</p>
           </div>
-        </article>
-        <article class="dish-card">
-          <!-- TODO : confirmer avec le client que cette photo correspond bien au carpaccio de bœuf (les frites ne figurent pas dans le descriptif de la carte) -->
-          <img src="images/photo-boeuf-carpaccio.jpg" alt="Carpaccio de bœuf : pesto, parmesan, noisettes" loading="lazy" width="800" height="600">
+        </a>
+        <a class="dish-card" href="menu.html#menu-crepes-gaufres">
+          <img src="images/cafe.webp" alt="Douceurs et café" loading="lazy" width="1103" height="1012">
           <div class="dish-card__body">
-            <h3 class="dish-card__name">Carpaccio de bœuf</h3>
-            <span class="dish-card__price">17,90&nbsp;€</span>
+            <div class="dish-card__row">
+              <h3 class="dish-card__name">Le goûter</h3>
+              <span class="dish-card__price">dès 14h30</span>
+            </div>
+            <p class="dish-card__desc">Crêpes, gaufres et glaces artisanales
+            Glaces des Alpes.</p>
           </div>
-        </article>
+        </a>
       </div>
       <p class="dishes__more">
         <a class="btn btn--primary" href="menu.html">Voir toute la carte</a>
